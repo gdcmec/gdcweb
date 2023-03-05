@@ -5,6 +5,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
+import Events from "./components/Events/Events";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <Navbar/>
       <Landing />
       <About/>
+      <Events />
     </div>
   );
 }
