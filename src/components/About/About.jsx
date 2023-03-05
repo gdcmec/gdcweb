@@ -1,11 +1,15 @@
 import React from "react";
 import "./About.css";
+import "../designs.css"
 const About = () => {
   return (
-    <div className="grid  grid-cols-1 md:grid-cols-3 about md:h-[100vh]">
+    <div className="relative h-[100vh] pt-10 overflow-hidden">
+      <div className="design-box p-4 "></div>
+      <div className="grid  grid-cols-1 md:grid-cols-3 about md:h-[100vh]">
       <Aboutcontent />
       <Aboutcontent />
       <Aboutcontent />
+    </div>
     </div>
   );
 };
