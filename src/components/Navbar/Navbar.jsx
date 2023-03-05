@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg'
 const Navbar = () => {
   return (
       
-          <div className="flex w-screen md:items-center border-b border-slate-800 py-3 px-6 align-middle">
+          <div className="flex fixed w-screen md:items-center border-b border-slate-800 py-2 px-6 align-middle bg-black">
               <img src={logo} alt="GDC"/>
               <nav className = "flex flex-1 justify-between text-[#FFFDD4] text-[20px] mx-auto">
                     
@@ -20,3 +20,5 @@ const Navbar = () => {
           </div>
   )
 }
+
+export default Navbar
