@@ -4,13 +4,13 @@ import "./Scrollbanner.css";
 const Scrollbanner = () => {
   return (
     <div id="container">
-      <header>
-        <h1>Animated Photo Banner</h1>
-        <p>temporary testing text</p>
-      </header>
-
       <div class="photobanner flex flex-row">
         <div className="outline-nosides textbanner outline-white first ">
+          <p className="text-[10em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white  ">
           <p className="text-[10em] text-white">
             Think it . Build it . Play it.
           </p>

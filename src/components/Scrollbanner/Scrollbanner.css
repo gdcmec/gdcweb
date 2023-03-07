@@ -33,11 +33,11 @@ header p {
 }
 /*keyframe animations*/
 .first {
-  -webkit-animation: bannermove 50s linear infinite;
-  -moz-animation: bannermove 50s linear infinite;
-  -ms-animation: bannermove 50s linear infinite;
-  -o-animation: bannermove 50s linear infinite;
-  animation: bannermove 50s linear infinite;
+  -webkit-animation: bannermove 40s linear infinite;
+  -moz-animation: bannermove 40s linear infinite;
+  -ms-animation: bannermove 40s linear infinite;
+  -o-animation: bannermove 40s linear infinite;
+  animation: bannermove 40s linear infinite;
 }
 
 @keyframes bannermove {
