@@ -6,15 +6,17 @@ import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Events from "./components/Events/Events";
+import Scrollbanner from "./components/Scrollbanner/Scrollbanner";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex h-100 flex-col px-5  ">
-      <Navbar/>
+    <div >
+      <Navbar />
       <Landing />
-      <About/>
+      <Scrollbanner />
+
       <Events />
     </div>
   );
