@@ -1,32 +1,111 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./Scrollbanner.css";
 
-const Scrollbanner = () => {
+const Scrollbanner = forwardRef((props,ref) => {
+  
   return (
-    <div id="container">
+    <div id="container" ref={ref} style={{ position: props.isFixed ? 'fixed' : 'static',
+    top: props.isFixed ? '35px' : 'auto' , zIndex: props.isFixed ? '1' : 'auto'
+    }} className="overflow-x-hidden">
       <div class="photobanner flex flex-row">
-        <div className="outline-nosides textbanner outline-white first ">
-          <p className="text-[10em] text-white">
+        <div className="outline-nosides textbanner outline-white bg-black  first ">
+          <p className="text-[1.5em] text-white">
             Think it . Build it . Play it.
           </p>
         </div>
-        <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">
+       
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
             Think it . Build it . Play it.
           </p>
         </div>
-        <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
             Think it . Build it . Play it.
           </p>
         </div>
-        <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
             Think it . Build it . Play it.
           </p>
         </div>
-        <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
+            Think it . Build it . Play it.
+          </p>
+        </div>
+        <div className="outline-nosides textbanner outline-white bg-black   ">
+          <p className="text-[1.5em] text-white">
             Think it . Build it . Play it.
           </p>
         </div>
@@ -62,6 +141,6 @@ const Scrollbanner = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Scrollbanner;
