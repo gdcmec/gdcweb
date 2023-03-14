@@ -4,7 +4,8 @@ import "../designs.css";
 const About = () => {
   return (
     <div className="relative h-[100vh] pt-10 overflow-hidden">
-      <h2 class="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
+	  <div className="design-box z-[-1]"></div>
+      <h2 class="text-3xl md:text-8xl text-[#FFF3D4] text-right w-1/3 ml-auto mr-[3.5rem]">About us</h2>
       <div className=" p-4 "></div>
       <div className="grid  grid-cols-1 md:grid-cols-3 about ">
         <div>
@@ -22,9 +23,9 @@ const About = () => {
 };
 const Aboutcontent = () => {
   return (
-    <div className="flex flex-col w-full min-h-[300px] px-2 columnDivider">
-      <h1 className="text-white text-xl px-2">What we do</h1>
-      <p className="text-white px-2 text-center ">
+    <div className="flex flex-col w-full min-h-[300px] px-4 columnDivider justify-start gap-8">
+      <h1 className="text-white text-3xl">What we do</h1>
+      <p className="text-white text-left text-[20px] ">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
         asperiores aspernatur quaerat soluta sit nam, aliquid ratione eum
         eveniet quam omnis laudantium quod optio doloribus? Quae accusamus aut

@@ -1,17 +1,19 @@
 @media screen and (min-width: 768px) {
-  .about :first-child {
-    transform: translateY(0px);
-  }
+	.about :first-child div{
+		transform: translateY(0px);
+	}
 
-  .about :nth-child(2) {
-    transform: translateY(100px);
-  }
-  .about :nth-child(3) {
-    transform: translateY(200px);
-  }
-  .columnDivider {
-    border-right: 1px solid #DEDEDE;
-    margin-right:-10px; 
-}
+	.about :nth-child(2) div{
+		transform: translateY(100px);
+	}
+
+	.columnDivider {
+		border-right: 1px solid #F3D19E;
+	}
+
+	.about :nth-child(3) div{
+		transform: translateY(200px);
+		border: none;
+	}
 }
 
