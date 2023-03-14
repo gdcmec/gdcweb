@@ -9,17 +9,17 @@ import Events from "./components/Events/Events";
 import Scrollbanner from "./components/Scrollbanner/Scrollbanner";
 
 function App() {
-  const [count, setCount] = useState(0);
+	const [count, setCount] = useState(0);
 
-  return (
-    <div >
-      <Navbar />
-      <Landing />
-      <Scrollbanner />
-
-      <Events />
-    </div>
-  );
+	return (
+		<div >
+			<Navbar />
+			<Landing />
+			<Scrollbanner />
+			<About/>
+			<Events />
+		</div>
+	);
 }
 
 export default App;
