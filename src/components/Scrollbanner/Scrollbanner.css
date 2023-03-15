@@ -11,7 +11,7 @@
 	display: flex;
 	gap: 300px;
 	justify-content: center;
-	animation: animate 5s linear infinite;
+	animation: animate 7s linear infinite;
 	white-space: nowrap;
 }
 
