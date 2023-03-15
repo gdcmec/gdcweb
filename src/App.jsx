@@ -9,15 +9,16 @@ import Scrollbanner from "./components/Scrollbanner/Scrollbanner";
 
 function App() {
 
-  return (
-    <div >
-      <Navbar />
-      <Landing />
-      {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
-      <Events />
-      <div className="h-[100vh]"></div>
-    </div>
-  );
+	return (
+		<div >
+			<Navbar />
+			<Scrollbanner/>
+			<Landing />
+			{/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
+			<Events />
+			<div className="h-[100vh]"></div>
+		</div>
+	);
 }
 
 export default App;
