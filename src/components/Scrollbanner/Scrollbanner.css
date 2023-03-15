@@ -18,8 +18,12 @@
 @keyframes animate{
 	100%{
 		-moz-transform: translate(-77% , 0);
+		-webkit-transform: translate(-77% , 0);
+		transform: translate(-77% , 0);
 	}
 	0%{
 		-moz-transform: translate(77% , 0);
+		-webkit-transform: translate(77% , 0);
+		transform: translate(77% , 0);
 	}
 }
