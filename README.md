@@ -2,7 +2,6 @@
 
 Official Website of GDCMEC MEC.
 
-
 ### We request you if you are about to contribute, write clean and well documented code and also we expect you to follow undermentioned commit message format:
 
     Build: A new feature or Feat: A new feature.
@@ -19,8 +18,9 @@ Official Website of GDCMEC MEC.
     git commit -m "Feat: Added UI component to add file" or git commit -m "Feat: Added UI component to add file",
     git commit -m "Fix: Bug in SomeView was fixed",
     etc.
-    
+
 # Steps To Run the Project:
+
 ### Fork the Repository and then run the below lines.
 
 ```bash
