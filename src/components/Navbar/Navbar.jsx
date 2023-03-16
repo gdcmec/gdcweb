@@ -14,7 +14,7 @@ const Navbar = ()=> {
       </nav>
     </div>
      <nav className='md:hidden block'>
-      <div class="navbar">
+      <div class="relative z-40 navbar">
         <div class="container nav-container">
             <input class="checkbox" type="checkbox" name="" id="" />
             <div class="hamburger-lines z-50 relative">
@@ -25,7 +25,7 @@ const Navbar = ()=> {
           <div class="logo">
             <img src={logo} width="70px" height="70px" alt="GDC" />
           </div>
-          <div class="relative z-40 menu-items">
+          <div class=" menu-items">
             <li><a href="#">Home</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">About</a></li>
