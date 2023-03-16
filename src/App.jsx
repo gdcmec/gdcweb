@@ -10,7 +10,7 @@ import Scrollbanner from "./components/Scrollbanner/Scrollbanner";
 function App() {
 
 	return (
-		<div className="overflow-x-hidden">
+		<div className="">
 			<Navbar />
 			<Landing />
 			{/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
