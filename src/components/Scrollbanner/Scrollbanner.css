@@ -6,6 +6,7 @@
 	background-color: #000;
 	padding: 3px 0px;
 	margin-bottom: 2%;
+  overflow: hidden;
 }
 
 .marquee div{

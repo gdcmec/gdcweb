@@ -23,7 +23,7 @@ const Navbar = ()=> {
               <span class="line line3"></span>
             </div>  
           <div class="logo">
-            <img src={logo} width="70px" height="70px" alt="GDC" />
+            <img src={logo} width="60px" height="60px" alt="GDC" />
           </div>
           <div class=" menu-items">
             <li><a href="#">Home</a></li>
