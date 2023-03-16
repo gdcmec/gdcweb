@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../assets/logo.svg';
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ()=> {
   return (
   <>
     <div className="hidden md:flex fixed w-screen items-center border-b border-slate-800 py-2 px-6 align-middle z-[1] bg-black">
@@ -17,7 +17,7 @@ const Navbar = () => {
       <div class="navbar">
         <div class="container nav-container">
             <input class="checkbox" type="checkbox" name="" id="" />
-            <div class="hamburger-lines">
+            <div class="hamburger-lines z-50 relative">
               <span class="line line1"></span>
               <span class="line line2"></span>
               <span class="line line3"></span>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <div class="logo">
             <img src={logo} width="70px" height="70px" alt="GDC" />
           </div>
-          <div class="menu-items">
+          <div class="relative z-40 menu-items">
             <li><a href="#">Home</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">About</a></li>
