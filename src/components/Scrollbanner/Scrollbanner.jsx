@@ -5,20 +5,20 @@ const Scrollbanner = () => {
   return (
     <div id="container">
       <div class="photobanner flex flex-row">
-        <div className="outline-nosides textbanner outline-white first ">
-          <p className="text-[10em] text-white">Think it . Build it . Play it.</p>
+        <div className="outline-nosides textbanner just outline-white first ">
+          <p className="text-[7em] text-white">Think it . Build it . Play it.</p>
         </div>
         <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">Think it . Build it . Play it.</p>
+          <p className="text-[7em] text-white">Think it . Build it . Play it.</p>
         </div>
         <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">Think it . Build it . Play it.</p>
+          <p className="text-[7em] text-white">Think it . Build it . Play it.</p>
         </div>
         <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">Think it . Build it . Play it.</p>
+          <p className="text-[7em] text-white">Think it . Build it . Play it.</p>
         </div>
         <div className="outline-nosides textbanner outline-white  ">
-          <p className="text-[10em] text-white">Think it . Build it . Play it.</p>
+          <p className="text-[7em] text-white">Think it . Build it . Play it.</p>
         </div>
 
         {/* <img class="first" src="https://c2.staticflickr.com/9/8454/28951308921_6589e3f1d3_z.jpg"/>

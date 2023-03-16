@@ -1,5 +1,5 @@
 body {
-  background: url('dark_geometric.png');
+  background: url("dark_geometric.png");
 }
 
 #container {
@@ -27,7 +27,7 @@ header p {
 /*photobanner*/
 
 .photobanner {
-  height: 220px;
+  height: 100px;
   width: 8640px;
   margin-bottom: 80px;
 }
