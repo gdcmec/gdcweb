@@ -3,7 +3,7 @@ import './Scrollbanner.css'
 
 const Scrollbanner = () => {
 	return (
-		<div className="marquee fixed z-[1] top-[80px] text-[#fff]">
+		<div className="marquee sticky z-[1] top-[80px] text-[#fff]">
 			<div>
 				<div className='text-4xl'>Think it</div>
 				<div className='text-4xl'>Build it</div>
