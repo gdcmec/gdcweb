@@ -12,9 +12,9 @@ function App() {
 	return (
 		<div >
 			<Navbar />
-			<Scrollbanner/>
 			<Landing />
 			{/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
+			<Scrollbanner/>
 			<Events />
 			<div className="h-[100vh]"></div>
 		</div>
