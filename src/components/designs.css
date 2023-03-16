@@ -1,15 +1,14 @@
+.design-box {
+  z-index: 2;
+  box-sizing: border-box;
 
-.design-box{
-    z-index: 2;
-    box-sizing: border-box;
-  
   position: absolute;
-  background-color: black ;
-  width: 620.02px;
-  height: 122.51px;
+  background-color: black;
+  width: 45vw;
+  height: 15vh;
   left: 65%;
   top: -5%;
-  border: 1px solid #FFF3D4;
-  box-shadow: 4px 4px 50px 5px rgba(255, 243, 212, 0.6);
+  border: 1px solid #fff3d4;
+  box-shadow: 0px 0px 40px 0px rgba(255, 243, 212, 0.6);
   transform: rotate(30.04deg);
-  }
+}

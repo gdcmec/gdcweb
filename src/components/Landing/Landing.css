@@ -1,7 +1,5 @@
-
 .text-title {
-
-  font-family: "Iceberg", cursive;
+  font-family: 'Iceberg', cursive;
   /* background-image: linear-gradient(
     to right,
     #462523 0,
@@ -15,20 +13,17 @@
   color: transparent;
   font-weight: 500;
   -webkit-background-clip: text; */
-  
-font-family: 'Iceberg';
-font-style: normal;
-font-weight: 400;
-font-size: 150px;
-line-height: 150px;
-/* or 100% */
 
+  font-family: 'Iceberg';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 150px;
+  color: white;
+  /* or 100% */
 
-color: #fff3d5;
+  /* color: #fff3d5; */
 
-/* text-decoration-style: 1px solid #E9A800; */
-text-shadow: 10px 4px 30px rgba(255, 253, 212, 0.5);
+  /* text-decoration-style: 1px solid #E9A800; */
+  /* text-shadow: 10px 4px 30px rgba(255, 253, 212, 0.5); */
 }
-
-
-
