@@ -32,10 +32,10 @@ const Landing =()=>{
 	// }, []);
 
 	return (
-		<div className=" relative z-0 overflow-hidden h-[100vh] pb-10" >
+		<div className=" relative z-1 overflow-hidden h-[100vh] pb-10" >
 			<div className="design-box p-4"></div>
-			<h1 className="text-title w-full md:w-[50%] text-[4rem] md:text-[7rem] leading-[5rem] md:text-left text-center md:leading-[9rem] mt-[10rem] md:ml-5 ">
-				Game Development Club<span className="text-[3rem] md:text-[4rem]">MEC</span>
+			<h1 className="text-title w-full md:w-[100px] text-[4rem] md:text-[7rem] leading-[5rem] md:text-left text-center md:leading-[9rem] mt-[10rem] md:ml-5 text-[#fff3d5] text-6xl">
+				Game Development Club<span className="text-[3rem] md:text-[4rem] ml-2">MEC</span>
 			</h1> 
 			{ 
 				// <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/>
