@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Events from "./components/Events/Events";
 import Scrollbanner from "./components/Scrollbanner/Scrollbanner";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
 			<Scrollbanner/>
       
 			<Events />
+			<Footer/>
+
 			
 		</div>
 	);
