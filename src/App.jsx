@@ -16,7 +16,7 @@ function App() {
 			<Landing />
 			{/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
 			<Scrollbanner/>
-      
+			<About/>
 			<Events />
 			<Footer/>
 
