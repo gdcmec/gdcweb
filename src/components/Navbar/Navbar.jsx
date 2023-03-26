@@ -13,9 +13,9 @@ const Navbar = ()=> {
         <span className="mx-4">About us</span>
       </nav>
     </div>
-     <nav className='md:hidden block'>
-      <div class="relative z-40 navbar">
-        <div class="container nav-container">
+     <nav className=' md:hidden block  '>
+      <div class="sticky z-40 navbar ">
+        <div class="container nav-container fixed">
             <input class="checkbox" type="checkbox" name="" id="" />
             <div class="hamburger-lines z-50 relative">
               <span class="line line1"></span>
