@@ -32,16 +32,17 @@ const Landing = () => {
   // }, []);
 
   return (
-    <div className=" relative z-1 flex flex-col  h-[100vh] pb-10">
+    <div className=" relative z-1 flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16">
       <h1 className="text-title ">
         Game Development Club<span className="text-[3rem] md:text-[4rem] ml-2">MEC</span>
       </h1>
       <button
-        className="outline bg-white text-white
-	   outline-white "
+        className="outline  text-white
+	   outline-white h-[30px] w-auto align-center text-center px-2  text-xl "
       >
         Start Game
       </button>
+	  <p className='text-white text-3xl '>Think it.  Build it.  Play it.</p>
       {
         // <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/>
       }
