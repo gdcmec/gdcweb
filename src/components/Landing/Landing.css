@@ -1,5 +1,4 @@
 .text-title {
-  font-family: 'Iceberg', cursive;
   /* background-image: linear-gradient(
     to right,
     #462523 0,
@@ -15,12 +14,31 @@
   -webkit-background-clip: text; */
 
   /* font-family: 'Iceberg'; */
-   font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Press Start 2P', cursive;
   font-style: normal;
   font-weight: 800;
   font-size: 150px;
   line-height: 150px;
   color: white;
+
+  position: absolute;
+  width: 1212px;
+  height: 240px;
+  left: calc(50% - 1212px / 2 + 8px);
+  top: calc(50% - 240px / 2 - 45px);
+
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 100px;
+  /* or 150% */
+
+  text-align: center;
+  letter-spacing: -0.057em;
+
+  color: #ffffff;
+
   /* or 100% */
 
   /* color: #fff3d5; */
