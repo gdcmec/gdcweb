@@ -33,7 +33,7 @@ const Landing = () => {
 
   return (
     <div className=" relative z-1 flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16">
-      <h1 className="text-title ">
+      <h1 className="text-title md:text-[4rem] text-[2.5rem] ">
         Game Development Club<span className="text-[3rem] md:text-[4rem] ml-2">MEC</span>
       </h1>
       <button
