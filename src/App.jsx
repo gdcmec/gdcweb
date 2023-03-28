@@ -20,9 +20,9 @@ function App() {
         </Parallax>
         {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
         {/* <Scrollbanner /> */}
-        <Parallax speed={10}>
+     
           <Events />
-        </Parallax>
+     
         <Footer />
       </ParallaxProvider>
     </div>
