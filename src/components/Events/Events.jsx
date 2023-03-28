@@ -33,7 +33,7 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="text-white">
+    <div className="text-white bg-black">
       <div className="w-full flex flex-row justify-evenly items-center">
         <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
         <div className="border border-[#FFF3D4] w-9/12 h-px"></div>

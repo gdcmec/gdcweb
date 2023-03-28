@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import '../designs.css';
 import './Landing.css';
 // import { useState, useEffect, useRef } from "react";
@@ -32,21 +33,25 @@ const Landing = () => {
   // }, []);
 
   return (
-    <div className=" relative z-1 flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16">
-      <h1 className="text-title md:text-[4rem] text-[2.5rem] ">
-        Game Development Club<span className="text-[3rem] md:text-[4rem] ml-2">MEC</span>
-      </h1>
-      <button
-        className="outline  text-white
+    <ParallaxProvider>
+      <Parallax>
+        <div className=" relative z-1 flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
+          <h1 className="text-title md:text-[4rem] text-[2.5rem] ">
+            Game Development Club<span className="text-[3rem] md:text-[4rem] ml-2">MEC</span>
+          </h1>
+          <button
+            className="outline  text-white
 	   outline-white h-[30px] w-auto align-center text-center px-2  text-xl "
-      >
-        Start Game
-      </button>
-	  <p className='text-white text-3xl '>Think it.  Build it.  Play it.</p>
-      {
-        // <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/>
-      }
-    </div>
+          >
+            Start Game
+          </button>
+          <p className="text-white text-3xl ">Think it. Build it. Play it.</p>
+          {
+            // <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/>
+          }
+        </div>
+      </Parallax>
+    </ParallaxProvider>
   );
 };
 
