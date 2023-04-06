@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
-import AeroCanvas from "./canvas/Aero";
+import { styles } from '../styles';
+import { ComputersCanvas } from './canvas';
+import AeroCanvas from './canvas/Aero';
 
 const Hero = () => {
   return (
@@ -17,7 +17,7 @@ const Hero = () => {
         {/* amber-400   [#915EFF] */}
         <div>
           <h2 className={`${styles.heroHeadText} text-white `}>
-            Game Development{" "}
+            Game Development{' '}
             <span className="text-white block">
               Club<span className="text-white text-2xl"> mec</span>
             </span>
@@ -41,7 +41,7 @@ const Hero = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: "loop",
+                repeatType: 'loop',
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />

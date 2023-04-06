@@ -1,13 +1,13 @@
-import { useState , useEffect , useRef } from "react";
-import "./App.css";
+import { useState, useEffect, useRef } from 'react';
+import './App.css';
 
-import Landing from "./components/Landing/Landing";
-import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/About";
-import Events from "./components/Events/Events";
-import Scrollbanner from "./components/Scrollbanner/Scrollbanner";
-import Footer from "./components/Footer/Footer";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import Landing from './components/Landing/Landing';
+import Navbar from './components/Navbar/Navbar';
+import About from './components/About/About';
+import Events from './components/Events/Events';
+import Scrollbanner from './components/Scrollbanner/Scrollbanner';
+import Footer from './components/Footer/Footer';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
@@ -16,13 +16,13 @@ function App() {
         <Navbar />
 
         <Parallax speed={0}>
-          <Landing /> 
+          <Landing />
         </Parallax>
         {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
         {/* <Scrollbanner /> */}
-     
-          <Events />
-     
+
+        <Events />
+
         <Footer />
       </ParallaxProvider>
     </div>
