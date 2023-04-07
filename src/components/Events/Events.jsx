@@ -30,21 +30,26 @@ const Events = () => {
   ]);
 
   const [popup, setPopup] = useState(false);
-  const [PopupEvent, setPopupEvent] = useState({});
+  const [popupEvent, setPopupEvent] = useState({});
 
   const handleClick = (index) => {
     setPopup(true);
     console.log(popup);
     setPopupEvent(events[index]);
-    console.log(PopupEvent);
+    console.log(popupEvent);
   };
 
   return (
     <>
+      {popup && <div className="fixed top-0 bottom-0 h-screen w-screen bg-black opacity-70"></div>}
       {popup && (
-        <div className="text-white bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex flex-col justify-center items-center">
-          <div>{JSON.stringify(PopupEvent)}</div>
+        <div className="text-white bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] flex flex-col justify-center items-center gap-10">
+          <p className="text-3xl">{popupEvent.title}</p>
+          <p>{popupEvent.date}</p>
+          <p>{popupEvent.location}</p>
+          <p>{popupEvent.description}</p>
           <button
+            className="absolute top-0 right-0 m-4"
             onClick={() => {
               setPopup(false);
             }}
