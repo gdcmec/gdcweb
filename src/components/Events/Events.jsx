@@ -41,7 +41,7 @@ const Events = () => {
 
   return (
     <>
-      {popup && <div className="fixed top-0 bottom-0 h-screen w-screen bg-black opacity-70"></div>}
+      {popup && <div className="fixed top-0 bottom-0 h-screen w-screen z-10 bg-black opacity-70"></div>}
       {popup && (
         <div className="text-white bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] flex flex-col justify-center items-center gap-10">
           <p className="text-3xl">{popupEvent.title}</p>
