@@ -8,7 +8,7 @@ import Events from './components/Events/Events';
 import Scrollbanner from './components/Scrollbanner/Scrollbanner';
 import Footer from './components/Footer/Footer';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
-import Timeline from './components/Timeline/Timeline';
+import WhatWeTeach from './components/WhatWeTeach/WhatWeTeach';
 
 function App() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -39,7 +39,7 @@ function App() {
         {/* <Scrollbanner /> */}
 
         <Events />
-        <Timeline/>
+		<WhatWeTeach/>
 
         <Footer />
       </ParallaxProvider>
