@@ -17,6 +17,7 @@ function App() {
 
         <Parallax speed={0}>
           <Landing />
+          <About />
         </Parallax>
         {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
         {/* <Scrollbanner /> */}

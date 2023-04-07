@@ -103,7 +103,7 @@ const Events = () => {
                   <p>{event.date}</p>
                 </div>
                 <div className="w-full h-full flex flex-col justify-evenly items-center outline outline-[#FFF3D4]">
-                  <h3 className="text-3xl uppercase text-center">{event.title}</h3>
+                  <h3 className="text-2xl uppercase text-center">{event.title}</h3>
                   <p className="text-center">{event.location}</p>
                 </div>
                 <div className="w-full h-3/12 flex justify-center items-center outline outline-[#FFF3D4]">
