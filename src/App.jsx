@@ -10,8 +10,25 @@ import Footer from './components/Footer/Footer';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
+  const [scrollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPos(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const navbarClasses = scrollPos > 500  ? ' bg-violet-500' : 'bg-black';
   return (
-    <div className="">
+    <div
+      className={`${navbarClasses}`}
+    >
       <ParallaxProvider>
         <Navbar />
 

@@ -3,8 +3,8 @@ import './About.css';
 import '../designs.css';
 const About = () => {
   return (
-    <div className="relative h-[100vh] pt-10 overflow-hidden">
-      <div className="design-box z-[-1]"></div>
+    <div className="relative h-auto md:h-[110vh] py-10 gap-8 overflow-hidden">
+      {/* <div className="design-box z-[-1]"></div> */}
       <h2 class="text-3xl md:text-8xl text-[#FFF3D4] text-right w-1/3 ml-auto mr-[3.5rem]">About us</h2>
       <div className=" p-4 "></div>
       <div className="grid  grid-cols-1 md:grid-cols-3 about ">

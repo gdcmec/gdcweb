@@ -3,6 +3,21 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Events = () => {
+  const [scrollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPos(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const navbarClasses = scrollPos > 1000 ? ' bg-black' : 'bg-violet-500';
   const [events, setEvents] = useState([
     {
       date: 'March 6, 2023',
@@ -80,7 +95,7 @@ const Events = () => {
           </button>
         </motion.div>
       )}
-      <div className="text-white bg-black py-5 ">
+      <div className={`text-white  py-5 ${navbarClasses} `}>
         <div className="w-full flex flex-row justify-evenly items-center">
           <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
           <div className="border border-[#FFF3D4] w-9/12 h-px"></div>
