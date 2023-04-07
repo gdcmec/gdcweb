@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
+import './Events.css'
 
 const Events = () => {
   const [scrollPos, setScrollPos] = useState(0);
@@ -17,7 +18,7 @@ const Events = () => {
     };
   }, []);
 
-  const navbarClasses = scrollPos > 1000 ? ' bg-black' : 'bg-violet-500';
+  const navbarClasses = scrollPos > 1000 ? ' bg-black' : 'bg-black';
   const [events, setEvents] = useState([
     {
       date: 'March 6, 2023',

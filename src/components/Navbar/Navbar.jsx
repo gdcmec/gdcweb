@@ -25,7 +25,7 @@ const Navbar = () => {
         className={`hidden md:flex fixed w-screen items-center  border-slate-800 py-2 px-6 align-middle z-[1] ${navbarClasses}`}
       >
         <img src={logo} width="70px" height="70px" alt="GDC" />
-        <nav className="hidden  md:flex gap-16 flex-1 md:justify-end text-white text-[20px] mr-[10%]">
+        <nav className="hidden  md:flex gap-16 flex-1 md:justify-end text-white text-[20px] mr-[5%]">
           <a class="group text-white transition-all duration-300 ease-in-out" href="#">
             <span class="bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               Home

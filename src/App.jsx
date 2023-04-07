@@ -24,11 +24,9 @@ function App() {
     };
   }, []);
 
-  const navbarClasses = scrollPos > 500  ? ' bg-violet-500' : 'bg-black';
+  const navbarClasses = scrollPos > 500 ? ' gradient' : 'gradient-default';
   return (
-    <div
-      className={`${navbarClasses}`}
-    >
+    <div className={`${navbarClasses}`}>
       <ParallaxProvider>
         <Navbar />
 

@@ -7,24 +7,24 @@ const About = () => {
       {/* <div className="design-box z-[-1]"></div> */}
       <h2 class="text-3xl md:text-8xl text-[#FFF3D4] text-right w-1/3 ml-auto mr-[3.5rem]">About us</h2>
       <div className=" p-4 "></div>
-      <div className="grid  grid-cols-1 md:grid-cols-3 about ">
+      <div className="grid  grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 about ">
         <div>
-          <Aboutcontent />
+          <Aboutcontent child="What We Do" />
         </div>
         <div>
-          <Aboutcontent />
+          <Aboutcontent child="Why We do it " />
         </div>
         <div>
-          <Aboutcontent />
+          <Aboutcontent child={"How we do it"} />
         </div>
       </div>
     </div>
   );
 };
-const Aboutcontent = () => {
+const Aboutcontent = ({child}) => {
   return (
     <div className="flex flex-col w-full min-h-[300px] px-4 columnDivider justify-start gap-8">
-      <h1 className="text-white text-3xl">What we do</h1>
+      <h1 className="text-white text-3xl underline">{child}</h1>
       <p className="text-white text-left text-[20px] ">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus asperiores aspernatur quaerat soluta sit nam,
         aliquid ratione eum eveniet quam omnis laudantium quod optio doloribus? Quae accusamus aut nam beatae?
