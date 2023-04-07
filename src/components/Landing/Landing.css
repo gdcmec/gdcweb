@@ -21,8 +21,7 @@
 
   color: white;
 
-  font-family: 'Press Start 2P';
-
+  font-family: 'Monument Extended Regular', sans-serif;
   /* or 150% */
 
   text-align: center;
@@ -35,4 +34,15 @@
 
   /* text-decoration-style: 1px solid #E9A800; */
   /* text-shadow: 10px 4px 30px rgba(255, 253, 212, 0.5); */
+}
+
+.glassmorphism{
+  position: relative;
+  background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 17px );
+-webkit-backdrop-filter: blur( 17px );
+border-radius: 10px;
+z-index: 2;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
