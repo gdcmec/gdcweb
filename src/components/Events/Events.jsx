@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Parallax } from 'react-scroll-parallax';
+
+import { motion } from 'framer-motion';
 
 const Events = () => {
   const [events, setEvents] = useState([
@@ -43,7 +44,16 @@ const Events = () => {
     <>
       {popup && <div className="fixed top-0 bottom-0 h-screen w-screen z-10 bg-black opacity-70"></div>}
       {popup && (
-        <div className="text-white bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] flex flex-col justify-center items-center gap-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            ease: 'linear',
+            duration: 1,
+            x: { duration: 1 },
+          }}
+          className="text-white transition ease-in-out delay-150 bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] flex flex-col justify-center items-center gap-10"
+        >
           <p className="text-3xl">{popupEvent.title}</p>
           <p>{popupEvent.date}</p>
           <p>{popupEvent.location}</p>
@@ -56,7 +66,7 @@ const Events = () => {
           >
             Close
           </button>
-        </div>
+        </motion.div>
       )}
       <div className="text-white bg-black py-5 ">
         <div className="w-full flex flex-row justify-evenly items-center">
