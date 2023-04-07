@@ -35,7 +35,7 @@ const Landing = () => {
   return (
     <ParallaxProvider>
       <Parallax>
-        <div className='glassmorphism'
+        <div className=''
          
         >
           <div className="bg-cover bg-no-repeat relative  flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16  bg-[url('https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds_181624-11068.jpg')]">

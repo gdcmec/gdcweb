@@ -11,13 +11,29 @@ import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import WhatWeTeach from './components/WhatWeTeach/WhatWeTeach';
 
 function App() {
+  const [scrollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPos(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const navbarClasses = scrollPos > 500 ? ' gradient' : 'gradient-default';
   return (
-    <div className="">
+    <div className={`${navbarClasses}`}>
       <ParallaxProvider>
         <Navbar />
 
         <Parallax speed={0}>
           <Landing />
+          <About />
         </Parallax>
         {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
         {/* <Scrollbanner /> */}
