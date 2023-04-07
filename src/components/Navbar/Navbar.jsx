@@ -21,9 +21,8 @@ const Navbar = () => {
   const navbarClasses = scrollPos > 50 ? 'nav bg-black' : 'nav';
   return (
     <>
-      <div
-        className={`hidden md:flex fixed w-screen items-center  border-slate-800 py-2 px-6 align-middle z-[1] ${navbarClasses}`}
-      >
+
+      <div className="hidden md:flex fixed w-screen items-center border-b border-slate-800 py-2 px-6 align-middle z-[2] bg-black nav">
         <img src={logo} width="70px" height="70px" alt="GDC" />
         <nav className="hidden  md:flex gap-16 flex-1 md:justify-end text-white text-[20px] mr-[5%]">
           <a class="group text-white transition-all duration-300 ease-in-out" href="#">
