@@ -2,108 +2,63 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
 import '../designs.css';
+
 const About = () => {
   const [id, setId] = useState(0);
+
+  const data = [
+    {
+      id: 0,
+      title: '01. What we do',
+      content:
+        'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
+    },
+    {
+      id: 1,
+      title: '02. What we do',
+      content:
+        'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
+    },
+    {
+      id: 2,
+      title: '03. What we do',
+      content:
+        'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
+    },
+  ];
+
   return (
     <div className="relative h-auto md:h-[110vh] py-10 gap-8 overflow-hidden gradient">
-      {/* <div className="design-box z-[-1]"></div> */}
-      <h2 class="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
-      <div className=" p-4 "></div>
+      <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 px-[6.8rem] py-5">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXQ9F0hvfW0twxKZG7E5Oq3o1KduSrVXMMrw&usqp=CAU"
-          className="flex-end"
-        />
-        {id == 0 && (
-          <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{duration:1}}
-            className="flex flex-col justify-center gap-2 px-4"
-          >
-            <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">01. What we do</h2>
-            <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-            <p className="text-[#afafc0] text-[1rem]">
-              A game development club typically focuses on creating video games and providing opportunities for members
-              to learn about various aspects of game development, such as programming, design, art, sound, and project
-              management.
-            </p>
-            <div className="flex flex-row mt-5 space-between justify-center gap-2 items-center">
-              <button onClick={() => setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                1
-              </button>
-              <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button onClick={() => setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                2
-              </button>
-              <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button onClick={() => setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                3
-              </button>
-            </div>
+        <img src="https://via.placeholder.com/300" alt="Game Development" className="flex-end" />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col justify-center gap-2 px-4"
+        >
+          <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">{data[id].title}</h2>
+          <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
+          <p className="text-[#afafc0] text-[1rem]">{data[id].content}</p>
+          <div className="flex flex-row mt-5 space-between justify-center gap-2 items-center">
+            {data.map((item) => (
+              <>
+                <button
+                  key={item.id}
+                  onClick={() => setId(item.id)}
+                  className={`w-10 h-10 text-center align-center rounded-full bg-white ${
+                    id === item.id && 'bg-blue-300'
+                  }`}
+                >
+                  {item.id + 1}
+                </button>
+                {item.id < 2 && <div className="bg-blue-300 h-[2px] w-[80px]"></div>}
+              </>
+            ))}
           </div>
-        )}
-        {id == 1 && (
-          <div className="flex flex-col justify-center gap-2 px-4">
-            <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">02. What we do</h2>
-            <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-            <p className="text-[#afafc0] text-[1rem]">
-              A game development club typically focuses on creating video games and providing opportunities for members
-              to learn about various aspects of game development, such as programming, design, art, sound, and project
-              management.
-            </p>
-            <div className="flex flex-row mt-5 space-between justify-center items-center gap-2">
-              <button onClick={() => setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                1
-              </button>
-              <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button onClick={() => setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                2
-              </button>
-              <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button onClick={() => setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                3
-              </button>
-            </div>
-          </div>
-        )}
-        {id == 2 && (
-          <div className="flex flex-col justify-center gap-2 px-4">
-            <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">03. What we do</h2>
-            <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-            <p className="text-[#afafc0] text-[1rem]">
-              A game development club typically focuses on creating video games and providing opportunities for members
-              to learn about various aspects of game development, such as programming, design, art, sound, and project
-              management.
-            </p>
-            <div className="flex flex-row mt-5 space-between justify-center items-center gap-2">
-              <button onClick={() => setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                1
-              </button>
-              <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button onClick={() => setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                2
-              </button>
-              <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button onClick={() => setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
-                3
-              </button>
-            </div>
-          </div>
-        )}
+        </motion.div>
       </div>
-  
-    </div>
-  );
-};
-const Aboutcontent = ({ child }) => {
-  return (
-    <div className="flex flex-col w-full min-h-[300px] px-4 columnDivider justify-start gap-8">
-      <h1 className="text-white text-3xl underline">{child}</h1>
-      <p className="text-white text-left text-[20px] ">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus asperiores aspernatur quaerat soluta sit nam,
-        aliquid ratione eum eveniet quam omnis laudantium quod optio doloribus? Quae accusamus aut nam beatae?
-      </p>
     </div>
   );
 };

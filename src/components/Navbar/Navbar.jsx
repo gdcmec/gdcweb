@@ -26,7 +26,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<div className={ `w-screen flex items-center justify-between py-3 fixed top-0 z-[2] pl-2 ${scrollbar ? 'bg-black' : ''}`}>
+		<div className={ `w-screen flex items-center justify-between py-3 fixed top-0 z-[2] px-5 ${scrollbar ? 'bg-black' : ''}`}>
 			<img src={logo} alt="true" className='h-[50px]'/>
 			<button onClick={handleHamburger} className='text-white text-3xl block md:hidden mr-3'>{ mobilenav ? <RxCross1/> : <GiHamburgerMenu/>}</button>
 			<ul className={ `text-white md:static md:w-max md:h-max md:pt-0 md:bg-inherit md:block md:mr-3 fixed top-0 w-screen pt-24 h-screen z-[-1] text-center bg-black ${mobilenav ? 'right-0':'right-full'}` }>
