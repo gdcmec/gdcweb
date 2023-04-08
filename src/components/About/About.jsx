@@ -15,23 +15,23 @@ const About = () => {
         />
         {id == 0 && (
           <div className="flex flex-col justify-center gap-2 px-4">
-            <h2 className="text-[#ffb4a1] uppercase text-[0.7rem]">01. What we do</h2>
+            <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">01. What we do</h2>
             <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-            <p className="text-[#b2beff] text-[1rem]">
+            <p className="text-[#afafc0] text-[1rem]">
               A game development club typically focuses on creating video games and providing opportunities for members
               to learn about various aspects of game development, such as programming, design, art, sound, and project
               management.
             </p>
             <div className="flex flex-row mt-5 space-between justify-center items-center">
-              <button onClick={()=>setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 1
               </button>
               <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button  onClick={()=>setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 2
               </button>
               <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button  onClick={()=>setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 3
               </button>
             </div>
@@ -39,47 +39,47 @@ const About = () => {
         )}
         {id == 1 && (
           <div className="flex flex-col justify-center gap-2 px-4">
-            <h2 className="text-[#ffb4a1] uppercase text-[0.7rem]">02. What we do</h2>
+            <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">02. What we do</h2>
             <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-            <p className="text-[#b2beff] text-[1rem]">
+            <p className="text-[#afafc0] text-[1rem]">
               A game development club typically focuses on creating video games and providing opportunities for members
               to learn about various aspects of game development, such as programming, design, art, sound, and project
               management.
             </p>
             <div className="flex flex-row mt-5 space-between justify-center items-center">
-              <button onClick={()=>setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 1
               </button>
               <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button  onClick={()=>setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 2
               </button>
               <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button  onClick={()=>setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 3
               </button>
             </div>
           </div>
         )}
-        {id ==2 && (
+        {id == 2 && (
           <div className="flex flex-col justify-center gap-2 px-4">
-            <h2 className="text-[#ffb4a1] uppercase text-[0.7rem]">03. What we do</h2>
+            <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">03. What we do</h2>
             <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-            <p className="text-[#b2beff] text-[1rem]">
+            <p className="text-[#afafc0] text-[1rem]">
               A game development club typically focuses on creating video games and providing opportunities for members
               to learn about various aspects of game development, such as programming, design, art, sound, and project
               management.
             </p>
             <div className="flex flex-row mt-5 space-between justify-center items-center">
-              <button onClick={()=>setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(0)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 1
               </button>
               <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button  onClick={()=>setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(1)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 2
               </button>
               <div className="bg-blue-300 h-[2px] w-[80px]"></div>
-              <button onClick={()=>setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
+              <button onClick={() => setId(2)} className="w-10 h-10 text-center align-center rounded-full bg-white">
                 3
               </button>
             </div>
