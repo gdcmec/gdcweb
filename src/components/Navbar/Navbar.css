@@ -1,1 +1,24 @@
 
+.mobilenav{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	right: 100%;
+	top: 0;
+	background-color: black;
+	z-index: 2;
+}
+
+.mobilenav.active{
+	right: 0;
+}
+
+.mobilenav li{
+	display: block;
+	text-align: center;
+	margin: 30px auto 0px auto;
+}
+
+.mobilenav li:first-child{
+	margin-top: 100px;
+}
