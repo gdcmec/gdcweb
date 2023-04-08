@@ -8,7 +8,7 @@ const About = () => {
       {/* <div className="design-box z-[-1]"></div> */}
       <h2 class="text-3xl md:text-8xl text-[#FFF3D4] text-right w-1/3 ml-auto mr-[3.5rem]">About us</h2>
       <div className=" p-4 "></div>
-      <div className="grid grid-cols-2 px-[6.8rem]">
+      <div className="grid grid-cols-1 md:grid-cols-2 px-[6.8rem]">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXQ9F0hvfW0twxKZG7E5Oq3o1KduSrVXMMrw&usqp=CAU"
           className="flex-end"
