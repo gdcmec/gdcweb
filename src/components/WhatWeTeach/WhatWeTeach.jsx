@@ -11,8 +11,8 @@ const WhatWeTeach = () => {
 				<hr className='mt-3'/>
 			</div>
 			<div className='timeline text-white h-[700px] my-16 flex flex-col gap-[180px] pt-16'>
-				<Card position={"right"}/>
-				<Card position={"left"}/>
+				<Card/>
+				<Card/>
 			</div>
 		</div>
 	)

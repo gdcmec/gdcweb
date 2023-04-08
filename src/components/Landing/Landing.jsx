@@ -38,9 +38,9 @@ const Landing = () => {
         <div className=''
          
         >
-          <div className="bg-cover bg-no-repeat relative  flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16  bg-[url('https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds_181624-11068.jpg')]">
-            <h1 className="text-title md:text-[4rem] text-[2.5rem] uppercase ">
-              Game Development Club<span className="text-[3rem] md:text-[4rem] ml-2">MEC</span>
+          <div className="bg-cover bg-no-repeat bg-center relative bg-fixed flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16  bg-[url('https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds_181624-11068.jpg')]">
+            <h1 className="text-title md:text-[4rem] text-[2rem] uppercase ">
+              Game Development Club<span className="text-[2rem] md:text-[4rem] ml-2 block"> MEC</span>
             </h1>
             <button
               className="outline  text-white

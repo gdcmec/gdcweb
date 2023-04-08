@@ -16,7 +16,7 @@
 	content: '';
 	display: block;
 	position: absolute;
-	top: 30%;
+	top: 40%;
 	left: 50%;
 	translate: -50% -50%;
 	width: 30px;
@@ -34,27 +34,15 @@
 	top: 10%;
 }
 
-.left{
-	right: 55%;
+.timeline section:nth-child(even) div div{
+	left: 54%;
 }
 
-.left::before{
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 5%;
-	left: 100%;
-	border: medium solid #fff3d5;
-	border-width: 15px 15px 15px 15px;
-    border-color: transparent transparent transparent #fff3d5;
+.timeline section:nth-child(odd) div div{
+	right: 54%;
 }
 
-.right{
-	left: 55%;
-}
-
-.right::before{
+.timeline section:nth-child(even) div div::before{
 	content: " ";
 	height: 0;
 	width: 0;
@@ -63,5 +51,99 @@
 	right: 100%;
 	border: medium solid #fff3d5;
 	border-width: 15px 15px 15px 15px;
-    border-color: transparent #fff3d5 transparent transparent;
+	border-color: transparent #fff3d5 transparent transparent;
+}
+
+.timeline section:nth-child(odd) div div::before{
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 6%;
+	left: 100%;
+	border: medium solid #fff3d5;
+	border-width: 15px 15px 15px 15px;
+	border-color: transparent transparent transparent #fff3d5;
+}
+
+
+/* .left{ */
+/* 	right: 55%; */
+/* } */
+
+/* .left::before{ */
+/* 	content: " "; */
+/* 	height: 0; */
+/* 	width: 0; */
+/* 	position: absolute; */
+/* 	top: 5%; */
+/* 	left: 100%; */
+/* 	border: medium solid #fff3d5; */
+/* 	border-width: 15px 15px 15px 15px; */
+/* 	border-color: transparent transparent transparent #fff3d5; */
+/* } */
+
+/* .right{ */
+/* 	left: 55%; */
+/* } */
+
+/* .right::before{ */
+/* 	content: " "; */
+/* 	height: 0; */
+/* 	width: 0; */
+/* 	position: absolute; */
+/* 	top: 6%; */
+/* 	right: 100%; */
+/* 	border: medium solid #fff3d5; */
+/* 	border-width: 15px 15px 15px 15px; */
+/* 	border-color: transparent #fff3d5 transparent transparent; */
+/* } */
+
+@media screen and (max-width:768px)
+{
+	.timeline::after{
+		left: 10%;
+	}
+
+	.timeline section:nth-child(even) div div{
+		left: 18%;
+	}
+
+	.timeline section:nth-child(odd) div div{
+		right: initial;
+		left: 18%;
+	}
+
+	.timeline-parent::after{
+		left: 10%;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #fff3d5;
+	}
+
+	.timeline section:nth-child(even) div div::before{
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		top: 6%;
+		right: 100%;
+		border: medium solid #fff3d5;
+		border-width: 15px 15px 15px 15px;
+		border-color: transparent #fff3d5 transparent transparent;
+	}
+
+	.timeline section:nth-child(odd) div div::before{
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		top: 6%;
+		left: initial;
+		right: 100%;
+		border: medium solid #fff3d5;
+		border-width: 15px 15px 15px 15px;
+		border-color: transparent #fff3d5 transparent transparent;
+	}
+
 }
