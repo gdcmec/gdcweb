@@ -27,7 +27,7 @@ function App() {
 
   const navbarClasses = scrollPos > 500 ? ' gradient' : 'gradient-default';
   return (
-    <div className={`${navbarClasses}`}>
+    <div >
       <ParallaxProvider>
         <Navbar />
 
