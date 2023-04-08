@@ -32,8 +32,10 @@ background: radial-gradient(circle, rgba(92,35,222,1) 59%, rgba(0,212,255,1) 74%
 }
 
 .gradient {
-background: rgb(92,35,222);
-background:radial-gradient(48.33% 60.62% at 80.87% 48.33%,#5635ad 0%,#13094e 100%);
+/* background: rgb(92,35,222); */
+/* background:radial-gradient(48.33% 60.62% at 80.87% 48.33%,#5635ad 0%,#13094e 100%); */
+background: rgb(26, 26, 27);
+background:radial-gradient(48.33% 60.62% at 80.87% 48.33%,#353538 0%,#181819 100%);
   /* background: linear-gradient(-45deg,#80D0C7, #80D0C7, #060606, #060606 ); */
 
 
