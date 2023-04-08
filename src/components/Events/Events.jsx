@@ -140,7 +140,7 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="p-10 flex flex-col md:flex-row justify-center items-center gap-10">
+        <div className="w-full p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-y-scroll bg-black">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
