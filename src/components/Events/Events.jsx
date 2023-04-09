@@ -63,7 +63,6 @@ const Events = () => {
       } else {
         setPastEvents((prev) => [...prev, event]);
       }
-      console.log({ upcomingEvents, pastEvents });
     }
   }, [events]);
 
