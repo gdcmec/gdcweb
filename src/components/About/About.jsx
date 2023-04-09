@@ -28,19 +28,19 @@ const About = () => {
   ];
 
   return (
-    <div className="relative h-auto md:h-[110vh] py-10 gap-8 overflow-hidden gradient">
+    <div className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center">
       <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 px-[6.8rem] py-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5">
         <img src="https://via.placeholder.com/300" alt="Game Development" className="flex-end" />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col justify-center gap-2 px-4"
+          className="flex flex-col justify-center gap-2 md:px-4"
         >
           <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">{data[id].title}</h2>
           <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-          <p className="text-[#afafc0] text-[1rem]">{data[id].content}</p>
+          <p className="text-[#afafc0] text-[1rem] max-h-96 overflow-y-hidden text-ellipsis">{data[id].content}</p>
           <div className="flex flex-row mt-5 space-between justify-center gap-2 items-center">
             {data.map((item) => (
               <>

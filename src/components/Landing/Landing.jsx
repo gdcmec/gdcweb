@@ -35,9 +35,7 @@ const Landing = () => {
   return (
     <ParallaxProvider>
       <Parallax>
-        <div className=''
-         
-        >
+        <div className="">
           <div className="bg-cover bg-no-repeat bg-center relative bg-fixed flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16  bg-[url('https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds_181624-11068.jpg')]">
             <h1 className="text-title md:text-[4rem] text-[2rem] uppercase ">
               Game Development Club<span className="text-[2rem] md:text-[4rem] ml-2 block"> MEC</span>
@@ -48,7 +46,7 @@ const Landing = () => {
             >
               Start Game
             </button>
-            <p className="text-white text-3xl ">Think it. Build it. Play it.</p>
+            <p className="text-white text-3xl text-center">Think it. Build it. Play it.</p>
             {
               // <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/>
             }

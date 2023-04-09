@@ -171,8 +171,8 @@ const Events = () => {
           </button>
         </motion.div>
       )}
-      <div className={`text-white  py-5 ${navbarClasses} `}>
-        <div className="w-full flex flex-row justify-evenly items-center">
+      <div className={`text-white px-8 py-5 ${navbarClasses} `}>
+        <div className="w-full flex flex-row justify-evenly items-center gap-10">
           <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
           <div className="border border-[#FFF3D4] w-9/12 h-px"></div>
         </div>
@@ -196,7 +196,7 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="w-full p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-y-scroll bg-black">
+        <div className="w-full max-h-[60vh] md:p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-x-scroll md:overflow-y-scroll bg-black">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
