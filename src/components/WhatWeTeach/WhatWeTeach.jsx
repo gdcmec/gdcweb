@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import './Style.css'
 
 const WhatWeTeach = () => {
-	 const [scrollPos, setScrollPos] = useState(0);
+	const [scrollPos,setScrollPos] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {

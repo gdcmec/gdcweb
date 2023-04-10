@@ -1,8 +1,9 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@200;300;400;500;600;700;800;900&display=swap');
 
-@font-face {
+/* @font-face {
   font-family: 'Monument Extended Regular';
   src: url('assets/fonts/MonumentExtended/MonumentExtended-Regular.otf');
 }
@@ -10,6 +11,11 @@
 @font-face {
   font-family: 'Monument Extended Ultrabold';
   src: url('assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf');
+} */
+
+*{
+  font-family: 'Orbitron' , sans-serif ;
+  scroll-behavior: smooth;
 }
 
 @tailwind base;

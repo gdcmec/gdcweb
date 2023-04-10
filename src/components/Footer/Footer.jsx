@@ -6,7 +6,7 @@ import logo from '../../assets/logo.svg';
 
 const Footer = () => {
   return (
-    <div className="text-white flex flex-col justify-center gap-5 md:justify-between items-start pt-4 h-[200px] border-t-[1px] md:flex-row md:h-[90px] md:items-center">
+    <div id='contact' className="text-white flex flex-col justify-center gap-5 md:justify-between items-start pt-4 h-[200px] border-t-[1px] md:flex-row md:h-[90px] md:items-center">
       <div className="ml-4">
         <p className="text-base">Get in touch</p>
         <p className="text-xl">gdcmec@mec.ac.in</p>
