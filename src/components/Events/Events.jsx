@@ -99,7 +99,7 @@ const Events = () => {
             delay: 1,
             x: { duration: 1 },
           }}
-          className="text-white transition ease-in-out delay-150 bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex md:flex-row flex-col-reverse justify-center items-center gap-10 md:gap-2"
+          className="text-white transition ease-in-out delay-150 events-gradient min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex md:flex-row flex-col-reverse justify-center items-center gap-10 md:gap-2"
         >
           <div className="w-full flex flex-col justify-center items-start gap-4">
             <p className="text-3xl">{popupEvent.title}</p>
@@ -120,7 +120,7 @@ const Events = () => {
           </button>
         </motion.div>
       )}
-      <div className={`text-white  py-5 ${navbarClasses} `}>
+      <div className={`text-white events-gradient py-5 ${navbarClasses} `}>
         <div className="w-full flex flex-row justify-evenly items-center">
           <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
           <div className="border border-[#FFF3D4] w-9/12 h-px"></div>
@@ -145,7 +145,7 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="w-full p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-y-scroll bg-black">
+        <div className="w-full p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-y-scroll ">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;

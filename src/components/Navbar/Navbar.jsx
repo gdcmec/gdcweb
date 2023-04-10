@@ -26,17 +26,31 @@ const Navbar = () => {
 	}
 
 	return (
-		<div className={ `w-screen flex items-center justify-between py-3 fixed top-0 z-[2] px-5 ${scrollbar ? 'bg-black' : ''}`}>
-			<img src={logo} alt="true" className='h-[50px]'/>
-			<button onClick={handleHamburger} className='text-white text-3xl block md:hidden mr-3'>{ mobilenav ? <RxCross1/> : <GiHamburgerMenu/>}</button>
-			<ul className={ `text-white md:static md:w-max md:h-max md:pt-0 md:bg-inherit md:block md:mr-3 fixed top-0 w-screen pt-24 h-screen z-[-1] text-center bg-black ${mobilenav ? 'right-0':'right-full'}` }>
-				<li className='block m-auto mb-3 md:inline md:ml-8'>Home</li>
-				<li className='block m-auto mb-3 md:inline md:ml-8'>About</li>
-				<li className='block m-auto mb-3 md:inline md:ml-8'>Events</li>
-				<li className='block m-auto mb-3 md:inline md:ml-8'>Contact</li>
-			</ul>
-		</div>
-	);
+    <div
+      className={`w-screen flex items-center justify-between py-3 fixed top-0 z-[2] px-5 nav-container ${
+        scrollbar ? 'bg-black' : ''
+      }`}
+    >
+      <img src={logo} alt="true" className="h-[50px]" />
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <button onClick={handleHamburger} className="hamburger-lines z-50 relative">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </button>
+      <button onClick={handleHamburger} className='text-white text-3xl block md:hidden mr-3'>{ mobilenav ? <RxCross1/> : <GiHamburgerMenu/>}</button>
+      <ul
+        className={`text-white md:static md:w-max md:h-max md:pt-0 md:bg-inherit md:block md:mr-3 fixed top-0 w-screen pt-24 h-screen z-[-1] text-center bg-black ${
+          mobilenav ? 'right-0' : 'right-full'
+        }`}
+      >
+        <li className="block m-auto mb-3 md:inline md:ml-8">Home</li>
+        <li className="block m-auto mb-3 md:inline md:ml-8">About</li>
+        <li className="block m-auto mb-3 md:inline md:ml-8">Events</li>
+        <li className="block m-auto mb-3 md:inline md:ml-8">Contact</li>
+      </ul>
+    </div>
+  );
 };
 
 export default Navbar;
