@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import { BiPhoneCall } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import './Events.css';
 import EventCard from './EventCard';
@@ -62,7 +63,6 @@ const Events = () => {
       } else {
         setPastEvents((prev) => [...prev, event]);
       }
-      console.log({ upcomingEvents, pastEvents });
     }
   }, [events]);
 
@@ -99,17 +99,67 @@ const Events = () => {
             delay: 1,
             x: { duration: 1 },
           }}
-          className="text-white transition ease-in-out delay-150 events-gradient min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex md:flex-row flex-col-reverse justify-center items-center gap-10 md:gap-2"
+          className="text-white transition ease-in-out delay-150 bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex flex-col justify-center items-center gap-10 md:gap-2"
         >
-          <div className="w-full flex flex-col justify-center items-start gap-4">
-            <p className="text-3xl">{popupEvent.title}</p>
-            <p>{popupEvent.date}</p>
-            <p>{popupEvent.location}</p>
-            <p>{popupEvent.description}</p>
+          <div className="flex md:flex-row flex-col-reverse justify-center items-center gap-10 md:gap-2">
+            <div className="w-full flex flex-col justify-center items-start gap-4">
+              <p className="text-3xl">{popupEvent.title}</p>
+              <p>{popupEvent.date}</p>
+              <p>{popupEvent.location}</p>
+              <p>{popupEvent.description}</p>
+              {!viewPastEvents && (
+                <>
+                  <button className="outline outline-white align-center text-center px-4 py-1 rounded text-md">
+                    Register
+                  </button>
+                  <div className="flex flex-row gap-4">
+                    <p className="flex items-center gap-1">
+                      <BiPhoneCall /> Admin
+                    </p>
+                    <p className="flex items-center gap-1">
+                      <BiPhoneCall />
+                      Manager
+                    </p>
+                  </div>
+                </>
+              )}
+            </div>
+            <div className="w-full h-full">
+              <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" />
+            </div>
           </div>
-          <div className="w-full h-full">
-            <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" />
-          </div>
+          {viewPastEvents && (
+            <div className="h-24 w-full flex flex-row justify-start gap-4 overflow-y-scroll">
+              <img
+                className="h-full w-auto shrink-0 object-contain"
+                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+              />
+              <img
+                className="h-full w-auto shrink-0 object-contain"
+                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+              />
+              <img
+                className="h-full w-auto shrink-0 object-contain"
+                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+              />
+              <img
+                className="h-full w-auto object-contain"
+                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+              />
+              <img
+                className="h-full w-auto object-contain"
+                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+              />
+              <img
+                className="h-full w-auto object-contain"
+                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+              />
+              <img
+                className="h-full w-auto object-contain"
+                src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+              />
+            </div>
+          )}
           <button
             className="absolute top-0 right-0 m-4"
             onClick={() => {
@@ -120,8 +170,8 @@ const Events = () => {
           </button>
         </motion.div>
       )}
-      <div className={`text-white events-gradient py-5 ${navbarClasses} `}>
-        <div className="w-full flex flex-row justify-evenly items-center">
+      <div className={`text-white px-8 py-5 ${navbarClasses} `}>
+        <div className="w-full flex flex-row justify-evenly items-center gap-10">
           <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
           <div className="border border-[#FFF3D4] w-9/12 h-px"></div>
         </div>
@@ -145,7 +195,7 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="w-full p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-y-scroll ">
+        <div className="w-full max-h-[60vh] md:p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-x-scroll md:overflow-y-scroll bg-black">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
