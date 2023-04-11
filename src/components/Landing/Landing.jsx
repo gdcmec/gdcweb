@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import '../designs.css';
 import './Landing.css';
-import landingimage from '../../assets/landingimage.jpg'
+import landingimage from '../../assets/landingimage.jpg';
 // import { useState, useEffect, useRef } from "react";
 
 // import Scrollbanner from "../Scrollbanner/Scrollbanner";
@@ -37,7 +37,7 @@ const Landing = () => {
     <ParallaxProvider>
       <Parallax>
         <div className="">
-          <div className="bg-cover bg-no-repeat bg-center relative bg-fixed flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16  bg-[url('https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-background_181624-11301.jpg?w=1060&t=st=1681197936~exp=1681198536~hmac=fe575fd600ade9233e291e8870336b780c0d4a1905d7e998cb85e733e0d0d1cf')]">
+          <div className=" backdrop-filter backdrop-hue-rotate-15 bg-cover bg-no-repeat bg-center relative bg-fixed flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16  bg-[url('https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-background_181624-11301.jpg?w=1060&t=st=1681197936~exp=1681198536~hmac=fe575fd600ade9233e291e8870336b780c0d4a1905d7e998cb85e733e0d0d1cf')]">
             <h1 className="text-title md:text-[4rem] text-[2rem] uppercase ">
               Game Development Club<span className="text-[2rem] md:text-[4rem] ml-2 block"> MEC</span>
             </h1>

@@ -45,22 +45,22 @@ const Navbar = () => {
         }`}
       >
         <a className="group text-white transition-all duration-300 ease-in-out" href="home">
-          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-gray-500 to-gray-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             Home
           </li>
         </a>
         <a className="group text-white transition-all duration-300 ease-in-out" href="home">
-          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-gray-500 to-gray-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             About
           </li>
         </a>
         <a className="group text-white transition-all duration-300 ease-in-out" href="home">
-          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-gray-500 to-gray-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             Events
           </li>
         </a>
         <a className="group text-white transition-all duration-300 ease-in-out" href="home">
-          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+          <li className="block m-auto mb-3 md:inline md:ml-8 bg-left-bottom bg-gradient-to-r from-gray-500 to-gray-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             Contact
           </li>
         </a>
