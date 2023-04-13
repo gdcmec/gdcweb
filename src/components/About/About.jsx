@@ -10,18 +10,21 @@ const About = () => {
     {
       id: 0,
       title: '01. What we do',
+      img: 'https://images.pexels.com/photos/2399840/pexels-photo-2399840.jpeg?auto=compress&cs=tinysrgb&w=400',
       content:
         'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
     },
     {
       id: 1,
       title: '02. What we do',
+      img: 'https://images.pexels.com/photos/8622911/pexels-photo-8622911.jpeg?auto=compress&cs=tinysrgb&w=400',
       content:
         'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
     },
     {
       id: 2,
       title: '03. What we do',
+      img: 'https://images.pexels.com/photos/2399840/pexels-photo-2399840.jpeg?auto=compress&cs=tinysrgb&w=400',
       content:
         'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
     },
@@ -47,7 +50,7 @@ const About = () => {
                 <button
                   key={item.id}
                   onClick={() => setId(item.id)}
-                  className={`w-10 h-10 text-center align-center rounded-full bg-white ${
+                  className={`w-8 h-8 md:w-10 md:h-10 text-center align-center rounded-full bg-white ${
                     id === item.id && 'bg-blue-300'
                   }`}
                 >

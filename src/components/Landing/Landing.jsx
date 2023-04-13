@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import '../designs.css';
 import './Landing.css';
+import landingimage from '../../assets/landingimage.jpg';
 // import { useState, useEffect, useRef } from "react";
 
 // import Scrollbanner from "../Scrollbanner/Scrollbanner";

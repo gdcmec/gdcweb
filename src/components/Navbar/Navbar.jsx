@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import './Navbar.css';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { RxCross1 } from 'react-icons/rx'
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { RxCross1 } from 'react-icons/rx';
 
 const Navbar = () => {
+  const [scrollbar, setscrollbar] = useState(false);
+  const [mobilenav, setmobilenav] = useState(false);
 
 	const [mobilenav, setmobilenav] = useState(false)
 
