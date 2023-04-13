@@ -10,8 +10,6 @@ const Navbar = () => {
   const [scrollbar, setscrollbar] = useState(false);
   const [mobilenav, setmobilenav] = useState(false);
 
-	const [mobilenav, setmobilenav] = useState(false)
-
 	const handleHamburger = () => {
 		setmobilenav(!mobilenav)
 	}
