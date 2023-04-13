@@ -76,7 +76,7 @@ const Events = () => {
   };
 
   return (
-    <>
+    <div id='events' className='scroll-mt-[90px]'>
       {popup && (
         <motion.div
           initial={{ height: 0 }}
@@ -207,7 +207,7 @@ const Events = () => {
             })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

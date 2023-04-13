@@ -36,10 +36,10 @@ const Landing = () => {
   return (
     <ParallaxProvider>
       <Parallax>
-        <div className="">
-          <div className=" backdrop-filter backdrop-hue-rotate-15 bg-cover bg-no-repeat bg-center relative bg-fixed flex flex-col justify-center items-center  h-[100vh] pb-10 gap-16  bg-[url('https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-background_181624-11301.jpg?w=1060&t=st=1681197936~exp=1681198536~hmac=fe575fd600ade9233e291e8870336b780c0d4a1905d7e998cb85e733e0d0d1cf')]">
-            <h1 className="text-title md:text-[4rem] text-[2rem] uppercase ">
-              Game Development Club<span className="text-[2rem] md:text-[4rem] ml-2 block"> MEC</span>
+        <div id='home' className="scroll-mt-[90px]">
+          <div className="bg-cover bg-no-repeat bg-center relative bg-fixed flex flex-col justify-center items-center  h-[100vh] pb-10 gap-8 bg-[url('https://img.freepik.com/free-vector/abstract-premium-black-gold-geometric-background_1017-24783.jpg?w=1380&t=st=1681139057~exp=1681139657~hmac=869dfeda2db9f287928f8a23697fe3a4109eaa9d95112916adb425fe33ad5ed7')]">
+            <h1 className="text-center text-[#f7e67a] font-bold md:text-[3rem] text-[2rem] uppercase">
+              Game Development Club<span className="text-[2rem] md:text-[3rem] ml-2 block"> MEC</span>
             </h1>
             <button
               className="outline  text-white
