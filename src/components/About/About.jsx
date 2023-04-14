@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { motion } from 'framer-motion';
 import './About.css';
 import '../designs.css';
 
 const About = () => {
   const [id, setId] = useState(0);
+  const [about, setAbout] = useState();
+  const [loading, setLoading] = useState(true);
 
   const data = [
     {
@@ -40,11 +43,22 @@ const About = () => {
     },
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get(`${import.meta.env.VITE_APP_API_URL}/cms/static/about`);
+      console.log(result.data);
+      setAbout(result.data);
+    };
+    fetchData().then(() => {
+        setLoading(false);
+    });
+  }, []);
+
+  
+
   return (
-    <div
-      id="about"
-      className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center scroll-mt-[90px]"
-    >
+    !loading && 
+    <div id='about' className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center scroll-mt-[90px]">
       <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5">
         <img src="https://via.placeholder.com/300" alt="Game Development" className="flex-end" />
