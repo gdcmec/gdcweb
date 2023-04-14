@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import axios from 'axios';
 import { BiPhoneCall } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import './Events.css';
@@ -7,8 +7,20 @@ import EventCard from './EventCard';
 
 const Events = () => {
   const [scrollPos, setScrollPos] = useState(0);
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
+    const fetch = async () => {
+
+      const res = await axios.get(`${import.meta.env.VITE_APP_API_URL}/cms/events/getHeaders`);
+      console.log(res.data);
+      setEvents(res.data.events);
+      
+    }
+    fetch().then(()=> setLoading(false))
+
     const handleScroll = () => {
       setScrollPos(window.scrollY);
     };
@@ -21,32 +33,32 @@ const Events = () => {
   }, []);
 
   const navbarClasses = scrollPos > 1000 ? ' bg-black' : 'bg-black';
-  const [events, setEvents] = useState([
-    {
-      date: '2023-07-06',
-      title: 'Introduction to GDC',
-      location: 'SDPK Hall',
-      description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      date: '2023-07-06',
-      title: 'Introduction to GDC',
-      location: 'SDPK Hall',
-      description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      date: '2023-07-01',
-      title: 'Introduction to GDC',
-      location: 'SDPK Hall',
-      description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      date: '2023-03-4',
-      title: 'Introduction to GDC',
-      location: 'SDPK Hall',
-      description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-    },
-  ]);
+  // const [events, setEvents] = useState([
+  //   {
+  //     date: '2023-07-06',
+  //     title: 'Introduction to GDC',
+  //     location: 'SDPK Hall',
+  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
+  //   },
+  //   {
+  //     date: '2023-07-06',
+  //     title: 'Introduction to GDC',
+  //     location: 'SDPK Hall',
+  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
+  //   },
+  //   {
+  //     date: '2023-07-01',
+  //     title: 'Introduction to GDC',
+  //     location: 'SDPK Hall',
+  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
+  //   },
+  //   {
+  //     date: '2023-03-4',
+  //     title: 'Introduction to GDC',
+  //     location: 'SDPK Hall',
+  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
+  //   },
+  // ]);
 
   const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState([]);

@@ -1,4 +1,5 @@
-import React,{ useState } from 'react'
+import React,{ useEffect, useState } from 'react'
+import axios from 'axios'
 import { councilMembers } from './data'
 import { webTeamMembers } from './data'
 import { committeeMembers } from './data'
@@ -6,11 +7,23 @@ import Section from './Section'
 
 const Team = () => {
 
-	const [teamMembers, setTeamMembers] = useState(councilMembers)
+	const [teamMembers, setTeamMembers] = useState()
+	const [loading, setLoading] = useState(true)
+	
+	
+	useEffect(() => {
+		const fetch = async () => {
+			const res = await axios.get(`${import.meta.env.VITE_APP_API_URL}/cms/members/getSections`)
+			setTeamMembers(res.data.sections)
+		}
+		fetch().then(() => setLoading(false))
 
+	}, [loading])
 
-  return (
-    <div className='min-h-screen text-[#fff3d5] mb-24'>
+	
+	return (
+		!loading &&
+		<div className='min-h-screen text-[#fff3d5] mb-24'>
 			<h1 className='text-3xl text-center mb-3'>Team 2023</h1>
 			<hr/>
 			<div className='flex flex-col gap-4 items-center md:flex-row md:justify-center md:gap-44 pt-8'>
