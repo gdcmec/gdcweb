@@ -52,15 +52,31 @@ const About = () => {
       <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5">
         <img src="https://via.placeholder.com/300" alt="Game Development" className="flex-end" />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col justify-center gap-2 md:px-4"
-        >
-          <h2 className="text-[#FFBF9B] uppercase text-[0.7rem]">{data[id].title}</h2>
-          <h2 className="text-white text-2xl text-left">Pushing Our Limits With Game Development</h2>
-          <p className="text-[#afafc0] text-[1rem] max-h-96 overflow-y-hidden text-ellipsis">{data[id].content}</p>
+        <motion.div key={data[id].id} className="flex flex-col justify-center gap-2 md:px-4">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1,delay:0.1 }}
+            className="text-[#FFBF9B] uppercase text-[0.7rem]"
+          >
+            {data[id].title}
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-white text-2xl text-left"
+          >
+            Pushing Our Limits With Game Development
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-[#afafc0] text-[1rem] max-h-96 overflow-y-hidden text-ellipsis"
+          >
+            {data[id].content}
+          </motion.p>
           <div className="flex flex-row mt-5 space-between justify-center gap-2 items-center">
             {data.map((item) => (
               <>

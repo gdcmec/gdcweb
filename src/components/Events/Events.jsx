@@ -88,17 +88,17 @@ const Events = () => {
   };
 
   return (
-    <div id='events' className='scroll-mt-[90px]'>
+    <div id="events" className="scroll-mt-[90px]">
       {popup && (
         <motion.div
-          initial={{ height: 0 }}
-          animate={{ height: '100%' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.7 }}
           transition={{
             ease: 'linear',
-            duration: 0.5,
-            x: { duration: 0.5 },
+            duration: 0.2,
+            x: { duration: 0.2 },
           }}
-          className="fixed top-0 bottom-0 h-screen w-screen z-10 bg-black opacity-70"
+          className="fixed top-0 bottom-0 h-screen w-screen z-10 bg-black"
         ></motion.div>
       )}
       {popup && (
@@ -107,9 +107,8 @@ const Events = () => {
           animate={{ opacity: 1 }}
           transition={{
             ease: 'linear',
-            duration: 1,
-            delay: 1,
-            x: { duration: 1 },
+            duration: 0.5,
+            x: { duration: 0.5 },
           }}
           className="text-white transition ease-in-out delay-150 bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex flex-col justify-center items-center gap-10 md:gap-2"
         >
@@ -207,7 +206,7 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="w-full max-h-[60vh] md:p-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-x-scroll md:overflow-y-scroll bg-black">
+        <div className="min-h-[60vh] md:py-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-x-scroll md:overflow-y-scroll bg-black">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
