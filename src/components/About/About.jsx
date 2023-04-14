@@ -79,7 +79,7 @@ const About = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-white text-2xl text-left"
+            className="text-white subheading text-2xl text-left"
           >
             {data[id].subheading}
           </motion.h2>
@@ -88,11 +88,11 @@ const About = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-[#afafc0] text-[1rem] max-h-96 overflow-y-hidden text-ellipsis"
+            className="text-[#afafc0] text-[1.2rem] max-h-96 overflow-y-hidden text-ellipsis"
           >
             {data[id].content}
           </motion.p>
-          <div className="flex flex-row mt-5 space-between justify-center gap-2 items-center">
+          <div className="flex  flex-row mt-5 space-between justify-center gap-2 items-center">
             {data.map((item) => (
               <>
                 <button

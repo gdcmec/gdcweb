@@ -11,15 +11,12 @@ const Events = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
     const fetch = async () => {
-
       const res = await axios.get(`${import.meta.env.VITE_APP_API_URL}/cms/events/getHeaders`);
       console.log(res.data);
       setEvents(res.data.events);
-      
-    }
-    fetch().then(()=> setLoading(false))
+    };
+    fetch().then(() => setLoading(false));
 
     const handleScroll = () => {
       setScrollPos(window.scrollY);
@@ -110,7 +107,7 @@ const Events = () => {
             duration: 0.5,
             x: { duration: 0.5 },
           }}
-          className="text-white transition ease-in-out delay-150 bg-black min-h-[50%] min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex flex-col justify-center items-center gap-10 md:gap-2"
+          className="text-white transition ease-in-out delay-150 bg-black min-h-[50%] md:min-h-[50%] min-w-[80%] md:min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex flex-col justify-center items-center gap-10 md:gap-2"
         >
           <div className="flex md:flex-row flex-col-reverse justify-center items-center gap-10 md:gap-2">
             <div className="w-full flex flex-col justify-center items-start gap-4">
