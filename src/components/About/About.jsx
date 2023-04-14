@@ -12,26 +12,30 @@ const About = () => {
   const data = [
     {
       id: 0,
+      subheading: 'Building a Community of Game Developers',
       title: '01. What we do',
       img: 'https://images.pexels.com/photos/2399840/pexels-photo-2399840.jpeg?auto=compress&cs=tinysrgb&w=400',
       content:
-        'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
+        'GDC MEC aims to create a community of game developers and to give its members a supportive environment in which they may grow their abilities and accomplish their game development objectives.',
     },
     {
       id: 1,
+      subheading: 'Creating a Culture of Game Development and Innovation',
       title: '02. What we do',
       img: 'https://images.pexels.com/photos/8622911/pexels-photo-8622911.jpeg?auto=compress&cs=tinysrgb&w=400',
       content:
-        'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
+        "We intend to create a culture of game development and the practice of it's various aspects, to get, up to date with the trends of gaming industry to gain knowledge and upscale the skills of students of MEC in this domain. ",
     },
     {
       id: 2,
+      subheading: 'Hosting Engaging Events and Providing Opportunities for Growth',
       title: '03. What we do',
       img: 'https://images.pexels.com/photos/2399840/pexels-photo-2399840.jpeg?auto=compress&cs=tinysrgb&w=400',
       content:
-        'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
+        'We host a variety of events, including seminars, game jams, competitions, and guest lectures to promote learning and creativity.The club also provides chances to promote and publish games, connect with other game makers, and learn useful industry insights.',
     },
   ];
+
   const letterAni = {
     initial: { y: 400 },
     animate: {
@@ -50,18 +54,18 @@ const About = () => {
       setAbout(result.data);
     };
     fetchData().then(() => {
-        setLoading(false);
+      setLoading(false);
     });
   }, []);
 
-  
-
   return (
-    !loading && 
-    <div id='about' className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center scroll-mt-[90px]">
+    <div
+      id="about"
+      className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center scroll-mt-[90px]"
+    >
       <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5">
-        <img src="https://via.placeholder.com/300" alt="Game Development" className="flex-end" />
+        <img className="w-[300px] h-[380px]" src={data[id].img} alt="Game Development" />
         <motion.div key={data[id].id} className="flex flex-col justify-center gap-2 md:px-4">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -71,8 +75,13 @@ const About = () => {
           >
             {data[id].title}
           </motion.h2>
-          <motion.h2 variants={letterAni} className="text-white text-2xl text-left">
-            Pushing Our Limits With Game Development
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-white text-2xl text-left"
+          >
+            {data[id].subheading}
           </motion.h2>
 
           <motion.p
