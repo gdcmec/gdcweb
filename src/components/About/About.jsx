@@ -29,6 +29,16 @@ const About = () => {
         'A game development club typically focuses on creating video games and providing opportunities for members to learn about various aspects of game development, such as programming, design, art, sound, and project management.',
     },
   ];
+  const letterAni = {
+    initial: { y: 400 },
+    animate: {
+      y: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1,
+      },
+    },
+  };
 
   return (
     <div
@@ -42,19 +52,15 @@ const About = () => {
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1,delay:0.1 }}
+            transition={{ duration: 1, delay: 0.1 }}
             className="text-[#FFBF9B] uppercase text-[0.7rem]"
           >
             {data[id].title}
           </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-white text-2xl text-left"
-          >
+          <motion.h2 variants={letterAni} className="text-white text-2xl text-left">
             Pushing Our Limits With Game Development
           </motion.h2>
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
