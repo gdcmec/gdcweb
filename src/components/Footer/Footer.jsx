@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="ml-4">
         <p className="text-base">Get in touch</p>
         <p className="text-xl mb-2">gdcmec@mec.ac.in</p>
-        <a href="" className='text-black bg-[#fff3d5] hover:bg-black hover:text-[#fff3d5] px-3'>Our Team</a>
+        <a href="/team" className='text-black bg-[#fff3d5] hover:bg-black hover:text-[#fff3d5] px-3'>Our Team</a>
       </div>
       <div className="flex pr-[35px]">
         <FaFacebookSquare size={25} style={{ marginRight: '2rem' }} />
@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
       <div className="ml-3 md:mr-4 flex flex-row items-center gap-1 md:flex-col">
         <img src={logo} alt="true" className="w-[40px]" />
-        <p className="text-sm">GDC CLUB,MEC</p>
+        <p className="text-sm">GDC MEC</p>
       </div>
     </div>
   );

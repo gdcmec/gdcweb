@@ -11,13 +11,7 @@ const Events = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetch = async () => {
-      const res = await axios.get(`${import.meta.env.VITE_APP_API_URL}/cms/events/getHeaders`);
-      console.log(res.data);
-      setEvents(res.data.events);
-    };
-    fetch().then(() => setLoading(false));
-
+    
     const handleScroll = () => {
       setScrollPos(window.scrollY);
     };
@@ -64,16 +58,25 @@ const Events = () => {
   const [viewPastEvents, setViewPastEvents] = useState(false);
 
   useEffect(() => {
-    for (const event of events) {
-      const date = new Date(event.date);
-      const today = new Date();
-      if (date >= today) {
-        setUpcomingEvents((prev) => [...prev, event]);
-      } else {
-        setPastEvents((prev) => [...prev, event]);
+
+    const fetch = async () => {
+      const res = await axios.get(`${import.meta.env.VITE_APP_API_URL}/cms/events/getHeaders`);
+      const events = res.data.events;
+      setEvents(res.data.events);
+      for (const event of events) {
+        const date = new Date(event.date);
+        const today = new Date();
+        if (date >= today) {
+          setUpcomingEvents((prev) => [...prev, event]);
+        } else {
+          setPastEvents((prev) => [...prev, event]);
+        }
       }
-    }
-  }, [events]);
+    };
+    fetch().then(() => setLoading(false));
+
+  
+  }, []);
 
   const handleClick = (index) => {
     setPopup(true);
@@ -133,7 +136,7 @@ const Events = () => {
               )}
             </div>
             <div className="w-full h-full">
-              <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" />
+              <img src={popupEvent.poster_url} />
             </div>
           </div>
           {viewPastEvents && (
