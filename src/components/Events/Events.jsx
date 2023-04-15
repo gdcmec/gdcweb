@@ -85,7 +85,7 @@ const Events = () => {
   };
 
   return (
-    <div id="events" className="scroll-mt-[90px]">
+    <div id="events" className="scroll-mt-[70px]">
       {popup && (
         <motion.div
           initial={{ opacity: 0 }}
