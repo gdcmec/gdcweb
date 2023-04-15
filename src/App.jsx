@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import WhatWeTeach from './components/WhatWeTeach/WhatWeTeach';
 import Team from './components/Team/Team';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -31,18 +32,33 @@ function App() {
     <div >
       <ParallaxProvider>
         <Navbar />
+    <Router>
+        <Routes>
 
+
+          <Route path = '/'
+          element = {
+            <div>
         <Parallax speed={0}>
           <Landing />
           <About />
         </Parallax>
-        {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
+          <Events />
+		      <WhatWeTeach/>
+          </div>
+          }/>
+
+          {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
         {/* <Scrollbanner /> */}
 
-        <Events />
-		<WhatWeTeach/>
+        <Route path = '/team'
+        element = {
+          <div className='mt-[7rem]'>
 				<Team/>
-
+          </div>
+        }/>
+        </Routes>
+    </Router>
         <Footer />
       </ParallaxProvider>
     </div>
