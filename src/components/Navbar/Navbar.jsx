@@ -10,12 +10,22 @@ const Navbar = () => {
   const [scrollbar, setscrollbar] = useState(false);
   const [mobilenav, setmobilenav] = useState(false);
 
+	const handleScroll = () => {
+		if (window.scrollY>50) {
+			setscrollbar(true)	
+		}
+		else{
+			setscrollbar(false)
+		}
+	}
+
+	window.addEventListener('scroll', handleScroll)
 	const handleHamburger = () => {
 		setmobilenav(!mobilenav)
 	}
 
 	return (
-		<div className='w-screen h-[90px] bg-[#0c0c0c] flex items-center justify-between py-3 fixed top-0 z-[2] px-5'>
+		<div className={`w-screen h-[70px] flex items-center justify-between py-3 fixed top-0 z-[2] px-5 ${scrollbar ? 'bg-[#0c0502]':'bg-none'}`}>
 			<img src={logo} alt="true" className='h-[50px]'/>
 			<button onClick={handleHamburger} className='text-white text-3xl block md:hidden mr-3'>{ mobilenav ? <RxCross1/> : <GiHamburgerMenu/>}</button>
 			<ul className={ `text-white font-medium md:static md:w-max md:h-max md:pt-0 md:bg-inherit md:block md:mr-3 fixed top-0 w-screen pt-24 h-screen z-[-1] text-center bg-black ${mobilenav ? 'right-0':'right-full'}` }>
