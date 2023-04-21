@@ -6,24 +6,31 @@ import logo from '../../assets/logo.svg';
 
 const Footer = () => {
   return (
-    <div id='contact' className="font-bold text-white flex flex-col justify-center gap-5 md:justify-between items-start pt-4 h-[200px] border-t-[1px] md:flex-row md:h-[110px] md:py-1 md:items-center">
-      <div className="ml-4">
+    <div
+      id="contact"
+      className="font-bold text-white flex flex-col md:flex-row justify-center items-center md:items-center gap-10 md:gap-5 md:justify-between p-4 w-full border-t-[1px]  md:h-auto"
+    >
+      <div className="w-full flex flex-col items-center justify-start md:items-start gap-2">
         <p className="text-base">Get in touch</p>
-        <p className="text-xl mb-2">gdcmec@mec.ac.in</p>
-        <a href="/team" className='text-black bg-[#fff3d5] hover:bg-black hover:text-[#fff3d5] px-3'>Our Team</a>
+        <p className="text-xl">gdcmec@mec.ac.in</p>
+        <a href="/team" className="text-black bg-[#fff3d5] hover:bg-black hover:text-[#fff3d5] px-3">
+          Our Team
+        </a>
       </div>
-      <div className="flex pr-[35px]">
-        <FaFacebookSquare size={25} style={{ marginRight: '2rem' }} />
-        <FaLinkedin size={25} style={{ marginRight: '2rem' }} />
-        <FaTwitter size={25} style={{ marginRight: '1.8rem' }} />
-        <FaInstagram size={25} style={{ marginRight: '2rem' }} />
+      <div className="w-full flex justify-center items-center gap-8">
+        <FaFacebookSquare size={25} />
+        <FaLinkedin size={25} />
+        <FaTwitter size={25} />
+        <FaInstagram size={25} />
       </div>
-      <div className="ml-3 md:mr-4 flex flex-row items-center gap-1 md:flex-col">
-        <img src={logo} alt="true" className="w-[40px]" />
-        <p className="text-sm">GDC MEC</p>
+      <div className="w-full flex flex-row md:flex-col justify-center md:justify-end md:items-end">
+        <div className='flex flex-col justify-center items-center'>
+          <img src={logo} alt="true" className="w-[40px]" />
+          <p className="text-sm">GDC MEC</p>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Footer;
