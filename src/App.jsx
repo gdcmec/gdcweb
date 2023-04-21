@@ -14,8 +14,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TeamBanner from './components/TeamBanner/TeamBanner';
 import Game from './components/Game/Game';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Nintendo } from './components/Nintendo/Nintendo';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 8000); // set the timeout to 3 seconds
+  }, []);
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -56,59 +64,64 @@ function App() {
   const navbarClasses = scrollPos > 500 ? ' gradient' : 'gradient-default';
   return (
     <div>
-      <Router>
-        <Navbar />
+      {loading ? (
+        <Nintendo />
+      ) : (
+        <Router>
+          <Navbar />
 
-        <AnimatePresence>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div>
-                  <Landing />
-                  <About />
-                  {/* <TeamBanner/> */}
-                  <Events />
-                  <WhatWeTeach />
-                  <Footer />
-                </div>
-              }
-            />
+          <AnimatePresence>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <div>
+                    <Landing />
+                    <About />
 
-            <Route
-              path="/team"
-              element={
-                <motion.div
-                  initial="initial"
-                  animate="in"
-                  exit="out"
-                  variants={pageVariants}
-                  transition={pageTransition}
-                  className="mt-[7rem]"
-                >
-                  <Team />
-                </motion.div>
-              }
-            />
+                    {/* <TeamBanner/> */}
+                    <Events />
+                    <WhatWeTeach />
+                    <Footer />
+                  </div>
+                }
+              />
 
-            <Route
-              path="/game"
-              element={
-                <motion.div
-                  initial="initial"
-                  animate="in"
-                  exit="out"
-                  variants={pageVariants}
-                  transition={pageTransition}
-                  className="mt-[7rem]"
-                >
-                  <Game />
-                </motion.div>
-              }
-            />
-          </Routes>
-        </AnimatePresence>
-      </Router>
+              <Route
+                path="/team"
+                element={
+                  <motion.div
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                    transition={pageTransition}
+                    className="mt-[7rem]"
+                  >
+                    <Team />
+                  </motion.div>
+                }
+              />
+
+              <Route
+                path="/game"
+                element={
+                  <motion.div
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                    transition={pageTransition}
+                    className="mt-[7rem]"
+                  >
+                    <Game />
+                  </motion.div>
+                }
+              />
+            </Routes>
+          </AnimatePresence>
+        </Router>
+      )}
     </div>
   );
 }
