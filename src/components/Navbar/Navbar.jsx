@@ -10,22 +10,53 @@ const Navbar = () => {
   const [scrollbar, setscrollbar] = useState(false);
   const [mobilenav, setmobilenav] = useState(false);
 
-	const handleHamburger = () => {
-		setmobilenav(!mobilenav)
-	}
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setscrollbar(true);
+    } else {
+      setscrollbar(false);
+    }
+  };
 
-	return (
-		<div className='w-screen h-[90px] bg-[#0c0c0c] flex items-center justify-between py-3 fixed top-0 z-[2] px-5'>
-			<img src={logo} alt="true" className='h-[50px]'/>
-			<button onClick={handleHamburger} className='text-white text-3xl block md:hidden mr-3'>{ mobilenav ? <RxCross1/> : <GiHamburgerMenu/>}</button>
-			<ul className={ `text-white font-medium md:static md:w-max md:h-max md:pt-0 md:bg-inherit md:block md:mr-3 fixed top-0 w-screen pt-24 h-screen z-[-1] text-center bg-black ${mobilenav ? 'right-0':'right-full'}` }>
-				<li className='block m-auto mb-3 md:inline md:ml-8'><a href='#home'>Home</a></li>
-				<li className='block m-auto mb-3 md:inline md:ml-8'><a href='#about'>About</a></li>
-				<li className='block m-auto mb-3 md:inline md:ml-8'><a href='#events'>Events</a></li>
-				<li className='block m-auto mb-3 md:inline md:ml-8'><a href='#contact'>Contact</a></li>
-			</ul>
-		</div>
-	);
+  window.addEventListener('scroll', handleScroll);
+  const handleHamburger = () => {
+    setmobilenav(!mobilenav);
+  };
+
+  return (
+    <div
+      className={`w-screen h-[70px] flex items-center justify-between py-3 fixed top-0 z-[2] px-5 ${
+        scrollbar ? 'bg-[#0c0502]' : 'bg-none'
+      }`}
+    >
+      <img src={logo} alt="true" className="h-[50px]" />
+      <button onClick={handleHamburger} className="text-white text-3xl block md:hidden mr-3">
+        {mobilenav ? <RxCross1 /> : <GiHamburgerMenu />}
+      </button>
+      <div className={`hidden md:flex gap-10 items-center ${mobilenav ? 'flex' : 'hidden'}`}>
+        <a class="group text-white transition-all duration-300 ease-in-out" href="#">
+          <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+            Home
+          </span>
+        </a>
+        <a class="group text-white transition-all duration-300 ease-in-out" href="#">
+          <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+            About
+          </span>
+        </a>
+        <a class="group text-white transition-all duration-300 ease-in-out" href="#">
+          <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+            Events
+          </span>
+        </a>
+        <a class="group text-white transition-all duration-300 ease-in-out" href="#">
+          <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+            Contact
+          </span>
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;

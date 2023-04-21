@@ -59,56 +59,56 @@ const About = () => {
   }, []);
 
   return (
-    <div
-      id="about"
-      className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center scroll-mt-[90px]"
-    >
-      <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5">
-        <img className="w-[300px] h-[380px]" src={data[id].img} alt="Game Development" />
-        <motion.div key={data[id].id} className="flex flex-col justify-center gap-2 md:px-4">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.1 }}
-            className="text-[#FFBF9B] uppercase text-[0.7rem]"
-          >
-            {data[id].title}
-          </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-white subheading text-2xl text-left"
-          >
-            {data[id].subheading}
-          </motion.h2>
+    <div id='about' className='scroll-mt-[70px]'>
+      <div
+        className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center"
+      >
+        <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5">
+          <img className="w-[300px] h-[380px]" src={data[id].img} alt="Game Development" />
+          <motion.div key={data[id].id} className="flex flex-col justify-center gap-4 md:px-4">
+            <motion.h2
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.1 }}
+              className="text-[#FFBF9B] uppercase text-[0.7rem]"
+            >
+              {data[id].title}
+            </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="text-white subheading text-2xl text-left"
+            >
+              {data[id].subheading}
+            </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-[#afafc0] text-[1.2rem] max-h-96 overflow-y-hidden text-ellipsis"
-          >
-            {data[id].content}
-          </motion.p>
-          <div className="flex  flex-row mt-5 space-between justify-center gap-2 items-center">
-            {data.map((item) => (
-              <>
-                <button
-                  key={item.id}
-                  onClick={() => setId(item.id)}
-                  className={`w-8 h-8 md:w-10 md:h-10 text-center align-center rounded-full bg-white ${
-                    id === item.id && 'bg-blue-300'
-                  }`}
-                >
-                  {item.id + 1}
-                </button>
-                {item.id < 2 && <div className="bg-blue-300 h-[2px] w-[80px]"></div>}
-              </>
-            ))}
-          </div>
-        </motion.div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-[#afafc0] text-[1.2rem] max-h-96 overflow-y-hidden text-ellipsis"
+            >
+              {data[id].content}
+            </motion.p>
+            <div className="flex  flex-row mt-5 space-between justify-center gap-2 items-center">
+              {data.map((item) => (
+                <>
+                  <button
+                    key={item.id}
+                    onClick={() => setId(item.id)}
+                    className={`w-8 h-8 md:w-10 md:h-10 text-center align-center rounded-full bg-white ${id === item.id && 'bg-blue-300'
+                      }`}
+                  >
+                    {item.id + 1}
+                  </button>
+                  {item.id < 2 && <div className="bg-blue-300 h-[2px] w-[80px]"></div>}
+                </>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

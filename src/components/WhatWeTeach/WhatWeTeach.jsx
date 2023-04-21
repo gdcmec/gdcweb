@@ -36,7 +36,7 @@ const WhatWeTeach = () => {
 				<h1 className='text-[#fff3d5] text-center text-4xl'>What we teach</h1>
 				<motion.hr initial={{height:0}} className='mt-3'/>
 			</div>
-			<div className='timeline text-white h-[700px] my-16 flex flex-col gap-[180px] pt-16'>
+			<div className='timeline text-white h-[1000px] my-16 flex flex-col gap-[180px] pt-16'>
 				{
 					techStack.map((item,index) => {
 						return <Card index={index} item={item}/>
