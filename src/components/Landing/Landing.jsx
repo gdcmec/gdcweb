@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+
 import '../designs.css';
 import './Landing.css';
 import landingimage from '../../assets/landingimage.jpg';
