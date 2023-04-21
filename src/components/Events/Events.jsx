@@ -206,7 +206,7 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="min-h-[60vh] md:py-10 flex flex-col md:flex-row justify-center items-center gap-10 overflow-x-scroll md:overflow-y-scroll bg-black">
+        <div className="h-[65vh] md:min-h-[60vh] md:py-10 flex flex-col md:flex-row justify-start items-center gap-10 overflow-x-scroll md:overflow-y-scroll bg-black">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
