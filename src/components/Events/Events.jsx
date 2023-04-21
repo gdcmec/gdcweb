@@ -26,32 +26,7 @@ const Events = () => {
  const navbarClasses = scrollPos > 1000
     ? 'bg-[#181819] gradient2 transition-all duration-500 ease-out'
     : 'bg-[#181819] gradient3 transition-all duration-500 ease-out';
-  // const [events, setEvents] = useState([
-  //   {
-  //     date: '2023-07-06',
-  //     title: 'Introduction to GDC',
-  //     location: 'SDPK Hall',
-  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-  //   },
-  //   {
-  //     date: '2023-07-06',
-  //     title: 'Introduction to GDC',
-  //     location: 'SDPK Hall',
-  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-  //   },
-  //   {
-  //     date: '2023-07-01',
-  //     title: 'Introduction to GDC',
-  //     location: 'SDPK Hall',
-  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-  //   },
-  //   {
-  //     date: '2023-03-4',
-  //     title: 'Introduction to GDC',
-  //     location: 'SDPK Hall',
-  //     description: 'Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua.',
-  //   },
-  // ]);
+
 
   const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState([]);
@@ -100,7 +75,7 @@ const Events = () => {
           className="fixed top-0 bottom-0 h-screen w-screen z-10 bg-black"
         ></motion.div>
       )}
-      {popup && <EventPopup popupEvent={popupEvent} viewPastEvents={viewPastEvents} />}
+      {popup && <EventPopup popupEvent={popupEvent} viewPastEvents={viewPastEvents} setPopup={setPopup} />}
       <div className={`text-white px-8 py-5 ${navbarClasses} `}>
         <div className="w-full flex flex-row justify-evenly items-center gap-10">
           <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
