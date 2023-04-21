@@ -64,20 +64,14 @@ function App() {
             <Route
               path="/"
               element={
-                <motion.div
-                  initial="initial"
-                  animate="in"
-                  exit="out"
-                  variants={pageVariants}
-                  transition={pageTransition}
-                >
+                <div>
                   <Landing />
                   <About />
                   {/* <TeamBanner/> */}
                   <Events />
                   <WhatWeTeach />
                   <Footer />
-                </motion.div>
+                </div>
               }
             />
 
