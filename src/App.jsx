@@ -43,7 +43,7 @@ function App() {
     
           <Landing />
           <About />
-          <TeamBanner/>
+          {/* <TeamBanner/> */}
     
           <Events />
 		      <WhatWeTeach/>
