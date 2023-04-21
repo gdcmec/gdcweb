@@ -43,17 +43,17 @@ const Navbar = () => {
             Home
           </span>
         </a>
-        <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#">
+        <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#about">
           <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             About
           </span>
         </a>
-        <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#">
+        <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#events">
           <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             Events
           </span>
         </a>
-        <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#">
+        <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#contact">
           <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             Contact
           </span>
