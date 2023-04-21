@@ -1,5 +1,30 @@
-.gradient{
-    background-color: #060606;
-background-image: linear-gradient(160deg, #060606 0%, #80D0C7 100%);
+/* .gradient2 {
+  background: rgb(26, 26, 27);
+  background: radial-gradient(58.33% 60.62% at 60.87% 68.33%, #353538 0%, #181819 100%);
 
+  transition: background 500ms ease;
+} */
+
+.gradient3 {
+  background: rgb(26, 26, 27);
+  background: radial-gradient(58.33% 60.62% at 60.87% 68.33%, #353538 0%, #181819 100%);
+
+  transition: background 500ms ease;
+}
+.gradient2 {
+  background: rgb(26, 26, 27);
+  background: radial-gradient(58.33% 60.62% at 60.87% 38.33%, #353538 0%, #181819 100%);
+
+  animation: gradient-animation 0.5s ease-in-out ;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background: radial-gradient(58.33% 60.62% at 60.87% 38.33%, #353538 0%, #181819 100%)
+   
+  }
+
+  100% {
+    background: radial-gradient(58.33% 60.62% at 60.87% 68.33%, #353538 0%, #181819 100%);
+  }
 }

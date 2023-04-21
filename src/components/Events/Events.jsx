@@ -23,7 +23,9 @@ const Events = () => {
     };
   }, []);
 
-  const navbarClasses = scrollPos > 1000 ? ' bg-[#171717]' : 'bg-black';
+ const navbarClasses = scrollPos > 1000
+    ? 'bg-[#181819] gradient2 transition-all duration-500 ease-out'
+    : 'bg-[#181819] gradient3 transition-all duration-500 ease-out';
   // const [events, setEvents] = useState([
   //   {
   //     date: '2023-07-06',
@@ -206,7 +208,7 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="h-[65vh] md:min-h-[60vh] md:py-10 flex flex-col md:flex-row justify-start items-center gap-10 overflow-x-scroll md:overflow-y-scroll bg-black">
+        <div className="h-[65vh] md:min-h-[60vh] md:py-10 flex flex-col md:flex-row justify-start items-center gap-10 overflow-x-scroll md:overflow-y-scroll ">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
