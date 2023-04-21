@@ -23,7 +23,7 @@ const Events = () => {
     };
   }, []);
 
-  const navbarClasses = scrollPos > 1000 ? ' bg-black' : 'bg-black';
+  const navbarClasses = scrollPos > 1000 ? ' bg-[#171717]' : 'bg-black';
   // const [events, setEvents] = useState([
   //   {
   //     date: '2023-07-06',

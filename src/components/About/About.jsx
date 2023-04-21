@@ -59,14 +59,17 @@ const About = () => {
   }, []);
 
   return (
-    <div id='about' className='scroll-mt-[70px]'>
-      <div
-        className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center"
-      >
+    <div id="about" className="scroll-mt-[70px]">
+      <div className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient flex flex-col justify-center items-center">
         <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5">
-          <img className="w-[300px] h-[380px]" src={data[id].img} alt="Game Development" />
-          <motion.div key={data[id].id} className="flex flex-col justify-center gap-4 md:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5 tracking-wide">
+          <motion.img
+        
+            className="w-[300px] h-[380px]"
+            src={data[id].img}
+            alt="Game Development"
+          />
+          <motion.div key={data[id].id} className="flex flex-col justify-center my-4 md:my-0 gap-4 md:px-4">
             <motion.h2
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -98,8 +101,9 @@ const About = () => {
                   <button
                     key={item.id}
                     onClick={() => setId(item.id)}
-                    className={`w-8 h-8 md:w-10 md:h-10 text-center align-center rounded-full bg-white ${id === item.id && 'bg-blue-300'
-                      }`}
+                    className={`w-8 h-8 md:w-10 md:h-10 text-center align-center rounded-full bg-white ${
+                      id === item.id && 'bg-blue-300'
+                    }`}
                   >
                     {item.id + 1}
                   </button>
