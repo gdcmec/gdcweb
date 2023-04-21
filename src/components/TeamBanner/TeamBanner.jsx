@@ -6,10 +6,10 @@ const TeamBanner = () => {
       <p>
         <span className="font-semibold ">"Alone we can do so little; together we can do so much."</span> - Helen Keller
       </p>
-      <p>
+      {/* <p>
         Behind every great project is a great team. Get to know the faces behind the work by clicking the button below
         and visiting our Meet the Team page.
-      </p>
+      </p> */}
       <button className="underline  text-black px-4 py-2 rounded-md ml-4">Meet The Team</button>
     </div>
   );
