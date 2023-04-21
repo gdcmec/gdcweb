@@ -29,13 +29,13 @@ function App() {
   const navbarClasses = scrollPos > 500 ? ' gradient' : 'gradient-default';
   return (
     <div >
-      <ParallaxProvider>
+      
         <Navbar />
 
-        <Parallax speed={0}>
+        
           <Landing />
           <About />
-        </Parallax>
+        
         {/* <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/> */}
         {/* <Scrollbanner /> */}
 
@@ -44,7 +44,7 @@ function App() {
 				<Team/>
 
         <Footer />
-      </ParallaxProvider>
+    
     </div>
   );
 }
