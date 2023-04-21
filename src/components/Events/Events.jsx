@@ -114,7 +114,7 @@ const Events = () => {
                 onClick={() => {
                   setViewPastEvents(true);
                 }}
-                className='px-2 rounded bg-[#FFF3D4] text-black' 
+                className="px-2 rounded bg-[#FFF3D4] text-black"
               >
                 Past Events
               </button>
