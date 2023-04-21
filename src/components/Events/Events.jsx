@@ -183,7 +183,7 @@ const Events = () => {
           </button>
         </motion.div>
       )}
-      <div className={`text-white px-8 py-5 ${navbarClasses} `}>
+      <div className={`text-white px-8 py-10 ${navbarClasses} `}>
         <div className="w-full flex flex-row justify-evenly items-center gap-10">
           <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
           <div className="border border-[#FFF3D4] w-9/12 h-px"></div>

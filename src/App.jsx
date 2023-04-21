@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer';
 import WhatWeTeach from './components/WhatWeTeach/WhatWeTeach';
 import Team from './components/Team/Team';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TeamBanner from './components/TeamBanner/TeamBanner';
 
 function App() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -42,6 +43,7 @@ function App() {
     
           <Landing />
           <About />
+          <TeamBanner/>
     
           <Events />
 		      <WhatWeTeach/>

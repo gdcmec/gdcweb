@@ -60,7 +60,7 @@ const About = () => {
 
   return (
     <div id="about" className="scroll-mt-[70px]">
-      <div className="relative h-auto min-h-[75vh] py-10 gap-8 overflow-hidden gradient  flex flex-col justify-center items-center">
+      <div className="relative h-auto min-h-[90vh] py-10 gap-8 overflow-hidden gradient  flex flex-col justify-center items-center">
         <h2 className="text-3xl md:text-6xl text-[#FFF3D4] text-center self-center md:mb-10">About us</h2>
         <div key={data[id].id} className="grid grid-cols-1 md:grid-cols-2 px-10 md:px-[6.8rem] py-5 tracking-wide">
           <motion.div
