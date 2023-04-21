@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross1 } from 'react-icons/rx';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrollbar, setscrollbar] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
       >
         <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#">
           <span class="bg-left-bottom bg-gradient-to-r from-yellow-500 to-yellow-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-            Home
+            <Link to="/">Home</Link>
           </span>
         </a>
         <a class="group text-white transition-all duration-300 ease-in-out ml-8" href="#about">

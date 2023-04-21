@@ -56,8 +56,9 @@ function App() {
   const navbarClasses = scrollPos > 500 ? ' gradient' : 'gradient-default';
   return (
     <div>
-      <Navbar />
       <Router>
+        <Navbar />
+
         <AnimatePresence>
           <Routes>
             <Route
@@ -75,6 +76,7 @@ function App() {
                   {/* <TeamBanner/> */}
                   <Events />
                   <WhatWeTeach />
+                  <Footer />
                 </motion.div>
               }
             />
@@ -113,7 +115,6 @@ function App() {
           </Routes>
         </AnimatePresence>
       </Router>
-      <Footer />
     </div>
   );
 }
