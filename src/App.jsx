@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 8000); // set the timeout to 3 seconds
+    }, 9000); // set the timeout to 3 seconds
   }, []);
   const pageVariants = {
     initial: {

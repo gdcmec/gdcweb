@@ -1,6 +1,7 @@
 import React from 'react';
 import './Nintendo.css';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 export const Nintendo = () => {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -12,7 +13,7 @@ export const Nintendo = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="">
+    <motion.div initial={{ y: 0 }} animate={{ y: '-100vh' }} transition={{ delay: 7.5, duration: 1 }} className="">
       <input type="checkbox" id="screen" name="screen" checked={isChecked} />
       <main className="nintendo-switch">
         <aside className="actions left">
@@ -54,6 +55,6 @@ export const Nintendo = () => {
           <div className="circle"></div>
         </aside>
       </main>
-    </div>
+    </motion.div>
   );
 };
