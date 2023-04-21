@@ -13,7 +13,12 @@ export const Nintendo = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <motion.div initial={{ y: 0 }} animate={{ y: '-100vh' }} transition={{ delay: 7.5, duration: 1 }} className="">
+    <motion.div
+      initial={{ y: 0 }}
+      animate={{ y: '-100vh' }}
+      transition={{ delay: 7.5, duration: 1 }}
+      className="scale-75 md:scale-100"
+    >
       <input type="checkbox" id="screen" name="screen" checked={isChecked} />
       <main className="nintendo-switch">
         <aside className="actions left">
