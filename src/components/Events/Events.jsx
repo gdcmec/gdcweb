@@ -23,10 +23,10 @@ const Events = () => {
     };
   }, []);
 
- const navbarClasses = scrollPos > 1000
-    ? 'bg-[#181819] gradient2 transition-all duration-500 ease-out'
-    : 'bg-[#181819] gradient3 transition-all duration-500 ease-out';
-
+  const navbarClasses =
+    scrollPos > 1000
+      ? 'bg-[#181819] gradient2 transition-all duration-500 ease-out'
+      : 'bg-[#181819] gradient3 transition-all duration-500 ease-out';
 
   const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState([]);
@@ -107,10 +107,23 @@ const Events = () => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
             })}
 
-          {!viewPastEvents &&
+          {!viewPastEvents && upcomingEvents.length === 0 ? (
+            <div className="w-full h-full flex flex-col justify-center items-center gap-10">
+              <h1 className="text-2xl">No Upcoming Events</h1>
+              <button
+                onClick={() => {
+                  setViewPastEvents(true);
+                }}
+                className='px-2 rounded bg-[#FFF3D4] text-black' 
+              >
+                Past Events
+              </button>
+            </div>
+          ) : (
             upcomingEvents.map((event, index) => {
               return <EventCard event={event} index={index} handleClick={handleClick} />;
-            })}
+            })
+          )}
         </div>
       </div>
     </div>
