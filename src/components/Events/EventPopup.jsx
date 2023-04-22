@@ -1,7 +1,19 @@
 import { BiPhoneCall } from 'react-icons/bi';
 import { motion } from 'framer-motion';
+import { useState , useEffect } from 'react';
+import axios from 'axios';
 
 const EventPopup = ({ popupEvent, viewPastEvents, setPopup }) => {
+
+  const [gallery, setGallery] = useState([]);
+  useEffect(() => {
+    const fetch = async () => {
+      const res = await axios.get(`${import.meta.env.VITE_APP_API_URL}/cms/events/get-gallery/${popupEvent.event_id}`);
+      setGallery(res.data.gallery);
+    };
+    fetch();
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -42,36 +54,28 @@ const EventPopup = ({ popupEvent, viewPastEvents, setPopup }) => {
       </div>
       {viewPastEvents && (
         <div className="h-24 w-full flex flex-row justify-start gap-4 overflow-y-scroll">
-          <img
+          {gallery.map((image) => (
+            <img
             className="h-full w-auto shrink-0 object-contain"
-            src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-          />
-          <img
-            className="h-full w-auto shrink-0 object-contain"
-            src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-          />
-          <img
-            className="h-full w-auto shrink-0 object-contain"
-            src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-          />
-          <img
-            className="h-full w-auto object-contain"
-            src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-          />
-          <img
-            className="h-full w-auto object-contain"
-            src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-          />
-          <img
-            className="h-full w-auto object-contain"
-            src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-          />
-          <img
-            className="h-full w-auto object-contain"
-            src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-          />
+              src={image.image_url}
+            />
+          ))}
+      <img
+         className="h-full w-auto shrink-0 object-contain"
+         src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+       />
+      <img
+         className="h-full w-auto shrink-0 object-contain"
+         src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+       />
+      <img
+         className="h-full w-auto shrink-0 object-contain"
+         src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
+       />
         </div>
       )}
+
+      
       <button
         className="absolute top-0 right-0 m-4"
         onClick={() => {
