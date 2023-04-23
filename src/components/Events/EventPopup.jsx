@@ -1,4 +1,5 @@
 import { BiPhoneCall } from 'react-icons/bi';
+import {AiOutlineClose} from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { useState , useEffect } from 'react';
 import axios from 'axios';
@@ -12,6 +13,7 @@ const EventPopup = ({ popupEvent, viewPastEvents, setPopup }) => {
       setGallery(res.data.gallery);
     };
     fetch();
+    console.log(popupEvent)
   }, []);
 
   return (
@@ -25,10 +27,11 @@ const EventPopup = ({ popupEvent, viewPastEvents, setPopup }) => {
       }}
       className="text-white transition ease-in-out delay-150 bg-black min-h-[50%] md:min-h-[50%] min-w-[80%] md:min-w-[50%] fixed z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-10 border-2 border-[#FFF3D4] rounded flex flex-col justify-center items-center gap-10 md:gap-2"
     >
-      <div className="flex md:flex-row flex-col-reverse justify-center items-center gap-10 md:gap-2">
-        <div className="w-full flex flex-col justify-center items-start gap-4">
-          <p className="text-3xl">{popupEvent.title}</p>
-          <p>{popupEvent.date}</p>
+      <div className="h-full flex md:flex-row flex-col-reverse justify-center items-center gap-10 md:gap-2">
+        <div className="w-full h-full flex flex-col justify-center items-start gap-4">
+          <p className="text-4xl">{popupEvent.title}</p>
+          <p>{((new Date(popupEvent.date)).toDateString()).toString()}</p>
+          <p>{popupEvent.time}</p>
           <p>{popupEvent.location}</p>
           <p>{popupEvent.description}</p>
           {!viewPastEvents && (
@@ -71,16 +74,9 @@ const EventPopup = ({ popupEvent, viewPastEvents, setPopup }) => {
       
         </div>
       )}
-
-      
-      <button
-        className="absolute top-0 right-0 m-4"
-        onClick={() => {
-          setPopup(false);
-        }}
-      >
-        Close
-      </button>
+      <AiOutlineClose className="absolute text-3xl top-0 right-0 m-4" onClick={() => {
+        setPopup(false);
+      }}/>
     </motion.div>
   );
 };
