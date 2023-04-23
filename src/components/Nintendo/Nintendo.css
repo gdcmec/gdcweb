@@ -1,7 +1,13 @@
-* {box-sizing: border-box;}
- input {display: none;} 
-button {outline:0 !important; cursor: 
- pointer;}
+* {
+  box-sizing: border-box;
+}
+input {
+  display: none;
+}
+button {
+  outline: 0 !important;
+  cursor: pointer;
+}
 body {
   background-color: #1e1e1e;
 }
@@ -22,6 +28,11 @@ body {
   height: 100vh;
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  
+  
+}
+
 .actions {
   width: 100px;
   height: 270px;
@@ -29,7 +40,8 @@ body {
   border: var(--stroke);
   text-align: center;
   position: relative;
-  box-shadow: inset -20px 0 var(--transp-black), inset 10px 0 rgba(255,255,255,0.2), inset 4px 4px rgba(255,255,255,0.5);
+  box-shadow: inset -20px 0 var(--transp-black), inset 10px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px rgba(255, 255, 255, 0.5);
 }
 .analogic {
   width: 50px;
@@ -42,8 +54,9 @@ body {
   margin: 30px 0 15px;
   left: -2px;
 }
-.analogic:after, .analogic:before {
-  content:"";
+.analogic:after,
+.analogic:before {
+  content: '';
   position: absolute;
   background-color: var(--black);
   width: 100%;
@@ -72,7 +85,8 @@ body {
   left: 50%;
   margin-left: -15px;
   margin-top: -15px;
-  box-shadow: inset -5px 0 var(--transp-black), inset 6px 0 rgba(255,255,255,0.2), inset 4px 8px rgba(255,255,255,0.1);
+  box-shadow: inset -5px 0 var(--transp-black), inset 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 8px rgba(255, 255, 255, 0.1);
 }
 .actions.left {
   background-color: var(--blue);
@@ -105,13 +119,13 @@ body {
   box-shadow: inset -3px 0 var(--transp-black);
 }
 .buttons button:after {
-  content: "";
-  width: 0; 
-  height: 0; 
+  content: '';
+  width: 0;
+  height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid var(--black);
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   position: absolute;
 }
 .buttons button:nth-child(1) {
@@ -135,7 +149,8 @@ body {
   margin-left: -13px;
   transform: rotate(180deg);
 }
-.circle, .square {
+.circle,
+.square {
   border: var(--stroke);
   background-color: var(--grey);
   width: 15px;
@@ -143,15 +158,15 @@ body {
   position: absolute;
   bottom: 70px;
   right: 15px;
-  
 }
 .circle {
   border-radius: 50%;
   left: 15px;
   right: auto;
 }
-.actions:after, .actions:before {
-  content: "";
+.actions:after,
+.actions:before {
+  content: '';
   position: absolute;
   background-color: var(--grey);
   z-index: -9;
@@ -163,12 +178,12 @@ body {
   border-radius: 300px;
   top: 20px;
 }
-.actions.left:after  {
+.actions.left:after {
   transform: rotate(14deg);
   left: -30px;
-  box-shadow: inset -70px 100px var(--transp-black),  inset -60px 80px var(--transp-black);
+  box-shadow: inset -70px 100px var(--transp-black), inset -60px 80px var(--transp-black);
 }
-.actions.right:after  {
+.actions.right:after {
   transform: rotate(-14deg);
   right: -30px;
   box-shadow: inset 70px 100px var(--transp-black), inset 60px 80px var(--transp-black);
@@ -178,7 +193,7 @@ body {
   width: 80px;
   height: 50px;
   top: -9px;
-  border: 2px solid var(--black)
+  border: 2px solid var(--black);
 }
 .actions.left:before {
   border-radius: 1000px 0;
@@ -188,23 +203,28 @@ body {
   border-radius: 0 1000px;
   right: -9px;
 }
-.minus, .plus {
+.minus,
+.plus {
   font-size: 20px;
   font-weight: bold;
   color: var(--black);
   position: absolute;
   top: 10px;
-  text-shadow: 0 2px rgba(255,255,255,0.3)
+  text-shadow: 0 2px rgba(255, 255, 255, 0.3);
 }
-.minus {right: 10px;}
-.plus {left: 10px;}
+.minus {
+  right: 10px;
+}
+.plus {
+  left: 10px;
+}
 
 .middle {
   padding: 6px 10px;
   background-color: var(--blue);
   border-top: var(--stroke);
   border-bottom: var(--stroke);
-/*   min-width: 150px; */
+  /*   min-width: 150px; */
   box-shadow: inset 0 0 50px var(--blue);
   overflow: hidden;
 }
@@ -220,10 +240,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; 
+  cursor: pointer;
 }
 .screen span {
-  font-family: "Arial";
+  font-family: 'Arial';
   color: #d4bc46;
   font-size: 1.2em;
   position: relative;
@@ -240,24 +260,30 @@ body {
   text-transform: uppercase;
   font-size: 1.5em;
 }
-.screen:after, .screen:before, .screen .glass, .screen .glass:after  {
-  content: "";
+.screen:after,
+.screen:before,
+.screen .glass,
+.screen .glass:after {
+  content: '';
   width: 200%;
   height: 100%;
   position: absolute;
   transform: rotate(45deg);
 }
-.screen .glass, .screen .glass:after {
+.screen .glass,
+.screen .glass:after {
   transform: rotate(-30deg);
-  background-color: rgba(255,255,255,.12);
-  top:-100px;
+  background-color: rgba(255, 255, 255, 0.12);
+  top: -100px;
   z-index: 99;
 }
-.screen .glass:after { transform: rotate(-12deg);}
+.screen .glass:after {
+  transform: rotate(-12deg);
+}
 .screen:before {
   background-color: var(--blue);
   top: 0;
-  left: 0; 
+  left: 0;
 }
 .screen:after {
   background-color: #ffefcc;
@@ -266,7 +292,7 @@ body {
 }
 /* shadow */
 .nintendo-switch:after {
-  content: "";
+  content: '';
   width: 600px;
   height: 30px;
   position: absolute;
@@ -299,7 +325,7 @@ body {
   }
   100% {
     transform: scalex(0);
-    width:90px;
+    width: 90px;
   }
 }
 
@@ -363,15 +389,15 @@ body {
 }
 @keyframes blueLine {
   0% {
-    top:0;
+    top: 0;
     transform: rotate(45deg);
   }
   8% {
-    top:-110px;
+    top: -110px;
     transform: rotate(0deg);
   }
   90% {
-    top:-110px;
+    top: -110px;
     transform: rotate(0deg);
   }
   100% {
@@ -381,15 +407,15 @@ body {
 }
 @keyframes whiteLine {
   0% {
-    top:0;
+    top: 0;
     transform: rotate(45deg);
   }
   8% {
-    top:110px;
+    top: 110px;
     transform: rotate(0deg);
   }
   90% {
-    top:110px;
+    top: 110px;
     transform: rotate(0deg);
   }
   100% {
@@ -398,41 +424,56 @@ body {
   }
 }
 
-input[type=checkbox]:checked + .nintendo-switch .screen {
-	animation: closeScreen 0.5s ease-out 0.2s; 
-	animation-fill-mode: forwards;
+input[type='checkbox']:checked + .nintendo-switch .screen {
+  animation: closeScreen 0.5s ease-out 0.2s;
+  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked + .nintendo-switch .screen span {
-  animation: hideText 0.5s ease-out 0.6; 
-	animation-fill-mode: forwards;
-}
-
-input[type=checkbox]:checked + .nintendo-switch .actions.left:after  {
-  animation: rotateBaseLeft 0.5s ease-out; 
-	animation-fill-mode: forwards;
+input[type='checkbox']:checked + .nintendo-switch .screen span {
+  animation: hideText 0.5s ease-out 0.6;
+  animation-fill-mode: forwards;
 }
 
-input[type=checkbox]:checked + .nintendo-switch .actions.right:after  {
-  animation: rotateBaseRight 0.5s ease-out; 
-	animation-fill-mode: forwards;
+input[type='checkbox']:checked + .nintendo-switch .actions.left:after {
+  animation: rotateBaseLeft 0.5s ease-out;
+  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked + .nintendo-switch .actions.right  {
-  animation: topBottom 2s cubic-bezier(.02,.45,0,1.4) 0.8s; 
-	animation-fill-mode: forwards;
+
+input[type='checkbox']:checked + .nintendo-switch .actions.right:after {
+  animation: rotateBaseRight 0.5s ease-out;
+  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked + .nintendo-switch .actions.left  {
-  animation: bottomTop 2s cubic-bezier(.02,.45,0,1.4)  0.9s; 
-	animation-fill-mode: forwards;
+input[type='checkbox']:checked + .nintendo-switch .actions.right {
+  animation: topBottom 2s cubic-bezier(0.02, 0.45, 0, 1.4) 0.8s;
+  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked + .nintendo-switch:after  {
-  animation: shadow 0.5s ease-out 0.2s; 
-	animation-fill-mode: forwards;
+input[type='checkbox']:checked + .nintendo-switch .actions.left {
+  animation: bottomTop 2s cubic-bezier(0.02, 0.45, 0, 1.4) 0.9s;
+  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked + .nintendo-switch .screen:before  {
-  animation: blueLine 3s ease-out; 
-	animation-fill-mode: forwards;
+input[type='checkbox']:checked + .nintendo-switch:after {
+  animation: shadow 0.5s ease-out 0.2s;
+  animation-fill-mode: forwards;
 }
-input[type=checkbox]:checked + .nintendo-switch .screen:after  {
-  animation: blueLine 3s ease-out 0.4; 
-	animation-fill-mode: forwards;
+input[type='checkbox']:checked + .nintendo-switch .screen:before {
+  animation: blueLine 3s ease-out;
+  animation-fill-mode: forwards;
+}
+input[type='checkbox']:checked + .nintendo-switch .screen:after {
+  animation: blueLine 3s ease-out 0.4;
+  animation-fill-mode: forwards;
+}
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 5s ease-in-out forwards;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }

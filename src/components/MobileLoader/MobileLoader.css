@@ -1,0 +1,72 @@
+#idCrown path {
+  fill: url(#gradientCrown);
+}
+
+.animated-gradient{
+    animation: animateGradient 5s linear alternate infinite;
+    animation-delay: 1s;
+}
+
+#gradientCrown stop:nth-child(1) {
+  animation: animateGradient 8.5s linear alternate ;
+   
+}
+#gradientCrown stop:nth-child(2) {
+  animation: animateGradient2 8.5s linear alternate ;
+  
+}
+#gradientCrown stop:nth-child(3) {
+  animation: animateGradient3 8.5s linear alternate ;
+ 
+}
+@keyframes animateGradient {
+  0% {
+    stop-color: #d4af3700;
+  }
+   25% {
+    stop-color: #d4af3725;
+  }
+  50% {
+    stop-color: #c18b2e57;
+  }
+  75% {
+    stop-color: #675109;
+  }
+  100% {
+    stop-color: #675109ca;
+  }
+}
+@keyframes animateGradient2 {
+  0% {
+    stop-color: #d4af3700;
+  }
+  25% {
+    stop-color: #d4af3731;
+  }
+  50% {
+    stop-color: #c18b2e57;
+  }
+    75% {
+    stop-color: #d4af37bc;
+  }
+  100% {
+    stop-color: #d4af37f4;
+  }
+}
+@keyframes animateGradient3 {
+  0% {
+    stop-color: #d4af3710;
+  }
+    25% {
+    stop-color: #d4af375f;
+  }
+  50% {
+    stop-color: #7e550f57;
+  }
+    75% {
+    stop-color: #755b076f;
+  }
+  100% {
+    stop-color: #755b07fe;
+  }
+}

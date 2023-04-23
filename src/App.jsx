@@ -15,6 +15,8 @@ import TeamBanner from './components/TeamBanner/TeamBanner';
 import Game from './components/Game/Game';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Nintendo } from './components/Nintendo/Nintendo';
+import { NintendoMob } from './components/NintendoMob/NintendoMob';
+import { Responsivehook1 } from './components/ResponsiveHook';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -65,10 +67,11 @@ function App() {
   return (
     <div>
       {loading ? (
-        <Nintendo />
+        <Responsivehook1 />
       ) : (
         <Router>
           <Navbar />
+          {/* <NintendoMob/> */}
 
           <AnimatePresence>
             <Routes>
