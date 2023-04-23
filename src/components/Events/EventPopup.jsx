@@ -58,7 +58,7 @@ const EventPopup = ({ popupEvent, viewPastEvents, setPopup }) => {
             <img
             className="h-full w-auto shrink-0 object-contain"
               src={image.image_url}
-            />
+            />  
           ))}
       <img
          className="h-full w-auto shrink-0 object-contain"
@@ -68,10 +68,7 @@ const EventPopup = ({ popupEvent, viewPastEvents, setPopup }) => {
          className="h-full w-auto shrink-0 object-contain"
          src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
        />
-      <img
-         className="h-full w-auto shrink-0 object-contain"
-         src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg"
-       />
+      
         </div>
       )}
 
