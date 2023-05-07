@@ -5,6 +5,8 @@ import { FaFacebookSquare, FaLinkedin, FaTwitter, FaInstagram } from 'react-icon
 import logo from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 
+import './Footer.css'
+
 const Footer = () => {
   return (
     <div
@@ -18,12 +20,19 @@ const Footer = () => {
           <Link to="/team">Our Team</Link>
         </div>
       </div>
-      <div className="w-full flex justify-center items-center gap-8">
-        <FaFacebookSquare size={25} />
-        <FaLinkedin size={25} />
-        <FaTwitter size={25} />
-        <FaInstagram size={25} />
-      </div>
+      <ul className="social pr-22">
+        <li><FaFacebookSquare size={25} className='mx-auto mt-2' /></li>
+        <li><FaLinkedin size={25} className='mx-auto mt-2' /></li>
+        <li><FaTwitter size={25} className='mx-auto mt-2' /></li>
+        <li><FaInstagram size={25} className='mx-auto mt-2' /></li>
+      </ul>
+      {/* <div className="flex pr-[35px]"> */}
+      {/* <div className="w-full flex justify-center items-center gap-8"> */}
+      {/*   <FaFacebookSquare size={25} /> */}
+      {/*   <FaLinkedin size={25} /> */}
+      {/*   <FaTwitter size={25} /> */}
+      {/*   <FaInstagram size={25} /> */}
+      {/* </div> */}
       <div className="w-full flex flex-row md:flex-col justify-center md:justify-end md:items-end">
         <div className="flex flex-col justify-center items-center">
           <img src={logo} alt="true" className="w-[40px]" />
