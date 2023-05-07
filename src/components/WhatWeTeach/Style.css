@@ -32,14 +32,29 @@
 	border: 1px solid #fff3d5;
 	display: block;
 	top: 10%;
+  transition: box-shadow 0.3s;
+  transition:  0.4s;
+  padding: 0px 20px;
+}
+
+.timeline-content:hover{
+  box-shadow: 0px 0px 20px 0px rgba(255, 243, 213,0.3);
 }
 
 .timeline section:nth-child(even) div div{
 	left: 54%;
 }
 
+.timeline section:nth-child(even) div div:hover{
+  left: 55%;
+}
+
 .timeline section:nth-child(odd) div div{
 	right: 54%;
+}
+
+.timeline section:nth-child(odd) div div:hover{
+	right: 55%;
 }
 
 .timeline section:nth-child(even) div div::before{
