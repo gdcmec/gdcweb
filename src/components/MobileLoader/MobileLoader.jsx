@@ -13,13 +13,13 @@ const MobileLoader = () => {
   return (
     <div className="h-[100vh] flex justify-center items-center">
       <svg width="637" height="480" viewBox="0 0 637 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {(
-          <linearGradient className='animated-gradient' id="gradientCrown" gradientTransform="rotate(120)">
+        {
+          <linearGradient className="animated-gradient" id="gradientCrown" gradientTransform="rotate(120)">
             <stop offset="0%" stopColor="#d4af370" stopOpacity={1} />
             <stop offset="50%" stopColor="#c18b2e0" stopOpacity={1} />
             <stop offset="100%" stopColor="#d4af370" stopOpacity={1} />
           </linearGradient>
-        )}
+        }
         <path
           fill="url(#gradientCrown)"
           fillRule="evenodd"
