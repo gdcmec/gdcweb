@@ -18,6 +18,7 @@ html, body {
 .gaming-card {
   height: 400px;
   width: 300px;
+  margin: auto;
   overflow: hidden;
   position: relative;
   color: white;
