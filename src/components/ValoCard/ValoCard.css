@@ -48,7 +48,7 @@ html, body {
   object-fit: cover;
   filter: grayscale(1) opacity(.3);
 }
-.gaming-card .card-content {
+.gaming-card .card-content  {
   --pos: 70%;
   
   position: absolute;
@@ -114,4 +114,25 @@ html, body {
   position: absolute;
   left: 0;
   bottom: -16px;
+}
+.gaming-card:hover .card-footer{
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+   top:100px
+    
+
+}
+
+.card-footer{
+   
+
+    position:absolute;
+  top: 500px;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+  transition-delay:0.3s ;
+
+
+    
+    
 }
