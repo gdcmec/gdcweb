@@ -1,6 +1,7 @@
 import React from 'react';
 import './MobileLoader.css';
 import { useState, useEffect } from 'react';
+import logo from '../../assets/gdc.gif'
 const MobileLoader = () => {
   const [showGradient, setShowGradient] = useState(false);
 
@@ -12,14 +13,15 @@ const MobileLoader = () => {
   }, []);
   return (
     <div className="h-[100vh] flex justify-center items-center">
-      <svg width="637" height="480" viewBox="0 0 637 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {(
-          <linearGradient className='animated-gradient' id="gradientCrown" gradientTransform="rotate(120)">
+      <img src={logo} alt="logo" className="w-[200px] h-[200px] object-contain" />
+      {/* <svg width="637" height="480" viewBox="0 0 637 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {
+          <linearGradient className="animated-gradient" id="gradientCrown" gradientTransform="rotate(120)">
             <stop offset="0%" stopColor="#d4af370" stopOpacity={1} />
             <stop offset="50%" stopColor="#c18b2e0" stopOpacity={1} />
             <stop offset="100%" stopColor="#d4af370" stopOpacity={1} />
           </linearGradient>
-        )}
+        }
         <path
           fill="url(#gradientCrown)"
           fillRule="evenodd"
@@ -33,7 +35,8 @@ const MobileLoader = () => {
         />
 
         <animate attributeName="stroke-dashoffset" from="1000000" to="0" dur="8s" fill="ease" begin="0s" />
-      </svg>
+        <animate attributeName="stroke" from="#000" to="#0ff" dur="8s" fill="ease" begin="0s" />
+      </svg> */}
     </div>
   );
 };
