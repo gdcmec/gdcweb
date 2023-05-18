@@ -2,22 +2,22 @@ import React from 'react'
 
 import './ValoCard.css'
 
-const ValoCard = () => {
+const ValoCard = ({date,title ,venue}) => {
   return (
     <div className=" ">
       <div class="effect-card gaming-card">
         <div class="status-report">
-          <p>Status Report</p>
+          <p>{date}</p>
         </div>
         <div class="card-content">
           <p class="player-name">
             {' '}
-            <span>SukhOPGod</span>
+            <span>GDCMEC</span>
           </p>
-          <h2>THE SWISS ARMY KNIFE</h2>
+          <h2>{title}</h2>
           <p class="player-role">
-            What
-            <span> we do</span>
+            {venue}
+            <span>Hall</span>
           </p>
         </div>
         <div class="card-footer">
