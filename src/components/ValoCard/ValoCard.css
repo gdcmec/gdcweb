@@ -61,7 +61,7 @@ html, body {
 }
 
 .gaming-card:hover .card-content {
-    transform: translateY(calc(var(--pos) * -3));
+    transform: translateY(calc(var(--pos) * -5));
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
@@ -69,6 +69,9 @@ html, body {
     font-size: 15px;
     
     
+}
+.gaming-card:hover .status-report{
+    display: none;
 }
 .card-content{
     width: 100%;
