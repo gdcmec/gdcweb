@@ -1,9 +1,8 @@
 import React from 'react';
 
 const EventCard = ({ event, index, handleClick }) => {
-
   let date = new Date(event.date);
-  date = date.toLocaleDateString("en-IN");
+  date = date.toLocaleDateString('en-IN');
   return (
     <div
       className="hover:scale-105 h-96 w-auto md:w-96 shrink-0 flex flex-col justify-between items-center bg-[url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')] bg-center bg-cover drop-shadow-lg"

@@ -1,6 +1,7 @@
 import React from 'react';
 import './MobileLoader.css';
 import { useState, useEffect } from 'react';
+import logo from '../../assets/gdc.gif'
 const MobileLoader = () => {
   const [showGradient, setShowGradient] = useState(false);
 
@@ -33,7 +34,8 @@ const MobileLoader = () => {
         />
 
         <animate attributeName="stroke-dashoffset" from="1000000" to="0" dur="8s" fill="ease" begin="0s" />
-      </svg>
+        <animate attributeName="stroke" from="#000" to="#0ff" dur="8s" fill="ease" begin="0s" />
+      </svg> */}
     </div>
   );
 };

@@ -17,6 +17,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Nintendo } from './components/Nintendo/Nintendo';
 import { NintendoMob } from './components/NintendoMob/NintendoMob';
 import { Responsivehook1 } from './components/ResponsiveHook';
+import ValoCard from './components/ValoCard/ValoCard';
+import CardContainer from './components/CardContainer/CardContainer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -80,11 +82,12 @@ function App() {
                 element={
                   <div>
                     <Landing />
-                    <About />
+                    <CardContainer />
 
                     {/* <TeamBanner/> */}
                     <Events />
                     <WhatWeTeach />
+
                     <Footer />
                   </div>
                 }
