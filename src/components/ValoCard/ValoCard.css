@@ -117,7 +117,7 @@ body {
 .gaming-card:hover .card-footer {
   visibility: visible;
   /* transition: all 0.5s ease-in-out; */
-  top: 100px;
+  top: 60px;
 }
 
 .card-footer {
@@ -125,7 +125,21 @@ body {
   top: 500px;
   left: 0;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;  
   /* transition-delay: 0.3s; */
+}
+
+.card-footer button {
+  width: 10rem;
+  background: black;
+  padding: 0.7rem 1rem;
+}
+
+.card-footer button:hover {
+  shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .card-footer p {
