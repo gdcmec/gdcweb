@@ -4,6 +4,7 @@ import { BiPhoneCall } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import './Events.css';
 import EventCard from './EventCard';
+import ValoCard from './../ValoCard/ValoCard';
 import EventPopup from './EventPopup';
 
 const Events = () => {
@@ -101,10 +102,10 @@ const Events = () => {
           </button>
         </div>
 
-        <div className="h-[65vh] md:min-h-[60vh] md:py-10 flex flex-col md:flex-row justify-start items-center gap-10 overflow-x-scroll md:overflow-y-scroll ">
+        <div className="md:min-h-[60vh] md:py-10 flex flex-col md:flex-row justify-start items-center gap-10 overflow-x-scroll md:overflow-y-scroll ">
           {viewPastEvents &&
             pastEvents.map((event, index) => {
-              return <EventCard event={event} index={index} handleClick={handleClick} />;
+              return <ValoCard event={event} index={index} handleClick={handleClick} />;
             })}
 
           {!viewPastEvents && upcomingEvents.length === 0 ? (
@@ -121,7 +122,7 @@ const Events = () => {
             </div>
           ) : (
             upcomingEvents.map((event, index) => {
-              return <EventCard event={event} index={index} handleClick={handleClick} />;
+              return <ValoCard event={event} index={index} handleClick={handleClick} />;
             })
           )}
         </div>

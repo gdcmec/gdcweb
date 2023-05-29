@@ -2,7 +2,9 @@ import React from 'react';
 
 import './ValoCard.css';
 
-const ValoCard = ({ date, title, venue }) => {
+const ValoCard = ({ event }) => {
+  let date = new Date(event?.date);
+  date = date.toLocaleDateString('en-IN');
   return (
     <div className=" ">
       <div class="effect-card gaming-card">
@@ -14,9 +16,9 @@ const ValoCard = ({ date, title, venue }) => {
             {' '}
             <span>GDCMEC</span>
           </p>
-          <h2>{title}</h2>
+          <h2>{event?.title}</h2>
           <p class="player-role">
-            {venue}
+            {event?.venue}
             <span>Hall</span>
           </p>
         </div>
