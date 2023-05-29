@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #D53A49;
-  --secondary-color: #0D111A;
+  --primary-color: #d53a49;
+  --secondary-color: #0d111a;
 }
 *,
 *::before,
@@ -9,11 +9,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
-
 
 .gaming-card {
   height: 400px;
@@ -24,7 +24,7 @@ html, body {
   color: white;
   background: var(--primary-color);
 }
-.gaming-card::before{
+.gaming-card::before {
   content: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400' width='300' height='400'%3E%3Cstyle%3E.a%7Bfill:%230d111a%7D%3C/style%3E%3Cpath class='a' d='m-0.1 23h184.2l15.3-15.3h100.6v-7.7h-300z'/%3E%3C/svg%3E");
   position: absolute;
   top: 0;
@@ -47,35 +47,33 @@ html, body {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: grayscale(1) opacity(.3);
+  filter: grayscale(1) opacity(0.3);
 }
-.gaming-card .card-content  {
+.gaming-card .card-content {
   --pos: 70%;
-  
+
   position: absolute;
   top: var(--pos);
   transform: translateY(calc(var(--pos) * -1));
   padding: 15px 20px;
   z-index: 2;
   background: var(--secondary-color);
-  filter: drop-shadow(0 0px 10px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.3));
 }
 
 .gaming-card:hover .card-content {
-    transform: translateY(calc(var(--pos) * -5));
-  transition: transform 0.5s ease-in-out;
+  transform: translateY(calc(var(--pos) * -5));
+  transition: transform 0.3s ease-in-out;
   width: 100%;
 }
-.gaming-card:hover .card-content h2{
-    font-size: 15px;
-    
-    
+.gaming-card:hover .card-content h2 {
+  font-size: 15px;
 }
-.gaming-card:hover .status-report{
-    display: none;
+.gaming-card:hover .status-report {
+  display: none;
 }
-.card-content{
-    width: 100%;
+.card-content {
+  width: 100%;
 }
 .card-content h2 {
   margin-bottom: 15px;
@@ -106,7 +104,7 @@ html, body {
 }
 .card-content::before {
   content: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 11' width='300' height='11'%3E%3Cstyle%3E.a%7Bfill:%230d111a%7D%3C/style%3E%3Cpath class='a' d='m0 0h59l10.5 11.1h46.5l9.3-10.7h84.7l7.9 7.8h82.1v2.8h-300z'/%3E%3C/svg%3E");
-  position:absolute;
+  position: absolute;
   top: -17px;
   left: 0;
 }
@@ -116,24 +114,20 @@ html, body {
   left: 0;
   bottom: -16px;
 }
-.gaming-card:hover .card-footer{
-    visibility: visible;
-    transition: all 0.5s ease-in-out;
-   top:100px
-    
-
+.gaming-card:hover .card-footer {
+  visibility: visible;
+  /* transition: all 0.5s ease-in-out; */
+  top: 100px;
 }
 
-.card-footer{
-   
-
-    position:absolute;
+.card-footer {
+  position: absolute;
   top: 500px;
   left: 0;
-  transition: all 0.5s ease-in-out;
-  transition-delay:0.3s ;
+  transition: all 0.3s ease-in-out;
+  /* transition-delay: 0.3s; */
+}
 
-
-    
-    
+.card-footer p {
+  padding: 0px 16px;
 }

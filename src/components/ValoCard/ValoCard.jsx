@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import './ValoCard.css'
+import './ValoCard.css';
 
-const ValoCard = ({date,title ,venue}) => {
+const ValoCard = ({ date, title, venue }) => {
   return (
     <div className=" ">
       <div class="effect-card gaming-card">
@@ -34,6 +34,6 @@ const ValoCard = ({date,title ,venue}) => {
       </div>
     </div>
   );
-}
+};
 
-export default ValoCard
+export default ValoCard;
