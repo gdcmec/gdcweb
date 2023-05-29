@@ -13,8 +13,7 @@ const MobileLoader = () => {
   }, []);
   return (
     <div className="h-[100vh] flex justify-center items-center">
-      <img src={logo} alt="logo" className="w-[200px] h-[200px] object-contain" />
-      {/* <svg width="637" height="480" viewBox="0 0 637 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="637" height="480" viewBox="0 0 637 480" fill="none" xmlns="http://www.w3.org/2000/svg">
         {
           <linearGradient className="animated-gradient" id="gradientCrown" gradientTransform="rotate(120)">
             <stop offset="0%" stopColor="#d4af370" stopOpacity={1} />

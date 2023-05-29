@@ -1,86 +1,85 @@
-.timeline{
-	position: relative;
+.timeline {
+  position: relative;
 }
 
-.timeline::after{
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 50%;
-	width: 1px;
-	background-color: #fff3d5;
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #fff3d5;
 }
 
-.timeline-parent::after{
-	content: '';
-	display: block;
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	translate: -50% -50%;
-	width: 30px;
-	height: 30px;
-	border: 5px solid #fff3d5;
-	border-radius: 50%;
-	background-color: black;
-	z-index: 1;
+.timeline-parent::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #fff3d5;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 1;
 }
 
-.timeline-content{
-	position: absolute;
-	border: 1px solid #fff3d5;
-	display: block;
-	top: 10%;
+.timeline-content {
+  position: absolute;
+  border: 1px solid #fff3d5;
+  display: block;
+  top: 10%;
   transition: box-shadow 0.3s;
-  transition:  0.4s;
+  transition: 0.4s;
   padding: 0px 20px;
 }
 
-.timeline-content:hover{
-  box-shadow: 0px 0px 20px 0px rgba(255, 243, 213,0.3);
+.timeline-content:hover {
+  box-shadow: 0px 0px 20px 0px rgba(255, 243, 213, 0.3);
 }
 
-.timeline section:nth-child(even) div div{
-	left: 54%;
+.timeline section:nth-child(even) div div {
+  left: 54%;
 }
 
-.timeline section:nth-child(even) div div:hover{
+.timeline section:nth-child(even) div div:hover {
   left: 55%;
 }
 
-.timeline section:nth-child(odd) div div{
-	right: 54%;
+.timeline section:nth-child(odd) div div {
+  right: 54%;
 }
 
-.timeline section:nth-child(odd) div div:hover{
-	right: 55%;
+.timeline section:nth-child(odd) div div:hover {
+  right: 55%;
 }
 
-.timeline section:nth-child(even) div div::before{
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 6%;
-	right: 100%;
-	border: medium solid #fff3d5;
-	border-width: 15px 15px 15px 15px;
-	border-color: transparent #fff3d5 transparent transparent;
+.timeline section:nth-child(even) div div::before {
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 6%;
+  right: 100%;
+  border: medium solid #fff3d5;
+  border-width: 15px 15px 15px 15px;
+  border-color: transparent #fff3d5 transparent transparent;
 }
 
-.timeline section:nth-child(odd) div div::before{
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 6%;
-	left: 100%;
-	border: medium solid #fff3d5;
-	border-width: 15px 15px 15px 15px;
-	border-color: transparent transparent transparent #fff3d5;
+.timeline section:nth-child(odd) div div::before {
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 6%;
+  left: 100%;
+  border: medium solid #fff3d5;
+  border-width: 15px 15px 15px 15px;
+  border-color: transparent transparent transparent #fff3d5;
 }
-
 
 /* .left{ */
 /* 	right: 55%; */
@@ -114,51 +113,70 @@
 /* 	border-color: transparent #fff3d5 transparent transparent; */
 /* } */
 
-@media screen and (max-width:768px)
-{
-	.timeline::after{
-		left: 10%;
-	}
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 5%;
+  }
 
-	.timeline section:nth-child(even) div div{
-		left: 18%;
-	}
+  .timeline-content {
+    width: 75%;
+    padding: 0px 10px;
+  }
 
-	.timeline section:nth-child(odd) div div{
-		right: initial;
-		left: 18%;
-	}
+  .timeline-content p {
+    width: 100%;
+  }
 
-	.timeline-parent::after{
-		left: 10%;
-		width: 20px;
-		height: 20px;
-		border: 1px solid #fff3d5;
-	}
+  .timeline-content:hover {
+    box-shadow: none;
+  }
 
-	.timeline section:nth-child(even) div div::before{
-		content: " ";
-		height: 0;
-		width: 0;
-		position: absolute;
-		top: 6%;
-		right: 100%;
-		border: medium solid #fff3d5;
-		border-width: 15px 15px 15px 15px;
-		border-color: transparent #fff3d5 transparent transparent;
-	}
+  .timeline section:nth-child(even) div div {
+    left: 18%;
+  }
 
-	.timeline section:nth-child(odd) div div::before{
-		content: " ";
-		height: 0;
-		width: 0;
-		position: absolute;
-		top: 6%;
-		left: initial;
-		right: 100%;
-		border: medium solid #fff3d5;
-		border-width: 15px 15px 15px 15px;
-		border-color: transparent #fff3d5 transparent transparent;
-	}
+  .timeline section:nth-child(odd) div div {
+    right: initial;
+    left: 18%;
+  }
 
+  .timeline section:nth-child(even) div div:hover {
+    left: 18%;
+  }
+
+  .timeline section:nth-child(odd) div div:hover {
+    left: 18%;
+  }
+
+  .timeline-parent::after {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff3d5;
+  }
+
+  .timeline section:nth-child(even) div div::before {
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 6%;
+    right: 100%;
+    border: medium solid #fff3d5;
+    border-width: 15px 15px 15px 15px;
+    border-color: transparent #fff3d5 transparent transparent;
+  }
+
+  .timeline section:nth-child(odd) div div::before {
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 6%;
+    left: initial;
+    right: 100%;
+    border: medium solid #fff3d5;
+    border-width: 15px 15px 15px 15px;
+    border-color: transparent #fff3d5 transparent transparent;
+  }
 }
