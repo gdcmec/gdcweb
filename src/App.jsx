@@ -82,7 +82,7 @@ function App() {
                 element={
                   <div>
                     <Landing />
-                    <CardContainer />
+                    {/* <CardContainer />*/}
 
                     {/* <TeamBanner/> */}
                     <Events />
