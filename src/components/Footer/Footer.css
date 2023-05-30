@@ -1,10 +1,10 @@
-.social{
+.social {
   display: flex;
 }
 
-.social li{
+.social li {
   /* color: rgba(167, 146, 129, 0.6); */
-  color: rgba(255, 243, 212,1);
+  color: rgba(255, 255, 255, 1);
   list-style-type: none;
   display: inline-block;
   width: 50px;
@@ -15,13 +15,13 @@
   cursor: pointer;
   margin-left: 10px;
   /* margin-bottom: 20px; */
-  transition: ease .3s;
+  transition: ease 0.3s;
 }
 
-.social li:hover{
+.social li:hover {
   /* color: rgba(167, 146, 129, 1); */
-  color: rgba(255, 243, 212,1);
-  border: 1px solid rgba(167, 146, 129, 1);
+  color: hsl(43, 100%, 55%);
+  border: 1px solid hsl(43, 100%, 55%);
 }
 
 .social:hover > li {

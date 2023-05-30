@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/newlogo.png';
 import './Navbar.css';
 import { useState, useEffect } from 'react';
 
@@ -8,29 +8,15 @@ import { RxCross1 } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [scrollbar, setscrollbar] = useState(false);
   const [mobilenav, setmobilenav] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setscrollbar(true);
-    } else {
-      setscrollbar(false);
-    }
-  };
-
-  window.addEventListener('scroll', handleScroll);
   const handleHamburger = () => {
     setmobilenav(!mobilenav);
   };
 
   return (
-    <div
-      className={`w-screen h-[70px] flex items-center justify-between py-3 fixed top-0 z-[2] px-5 ${
-        scrollbar ? 'bg-[#0c0502]' : 'bg-none'
-      }`}
-    >
-      <img src={logo} alt="true" className="h-[50px]" />
+    <div className="w-screen h-[60px] bg-black border-b-[1px] border-b-[#f57e1a] flex items-center justify-between py-3 fixed top-0 z-[3] px-5">
+      <img src={logo} alt="true" className="h-[110px] -translate-x-10" />
       <button onClick={handleHamburger} className="text-white text-3xl block md:hidden mr-3">
         {mobilenav ? <RxCross1 /> : <GiHamburgerMenu />}
       </button>
