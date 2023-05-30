@@ -26,8 +26,8 @@ const Events = () => {
 
   const navbarClasses =
     scrollPos > 1000
-      ? 'bg-[#181819] gradient2 transition-all duration-500 ease-out'
-      : 'bg-[#181819] gradient3 transition-all duration-500 ease-out';
+      ? 'bg-black transition-all duration-500 ease-out'
+      : 'bg-black transition-all duration-500 ease-out';
 
   const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState([]);
@@ -79,8 +79,8 @@ const Events = () => {
       {popup && <EventPopup popupEvent={popupEvent} viewPastEvents={viewPastEvents} setPopup={setPopup} />}
       <div className={`text-white px-8 py-5 md:py-10 ${navbarClasses} `}>
         <div className="w-full flex flex-row justify-evenly items-center gap-10">
-          <h2 className="text-3xl md:text-7xl text-[#FFF3D4]">Events</h2>
-          <div className="border border-[#FFF3D4] w-9/12 h-px"></div>
+          <h2 className="text-3xl md:text-7xl font-[Orbitron] text-primary">Events</h2>
+          <div className="border border-white w-9/12 h-px"></div>
         </div>
 
         <div className="mx-10 my-2 justify-self-end flex flex-row">
@@ -88,7 +88,7 @@ const Events = () => {
             onClick={() => {
               setViewPastEvents(false);
             }}
-            className={'px-2 rounded' + (viewPastEvents ? '' : ' bg-[#FFF3D4] text-black')}
+            className={'px-2 rounded text-white border-[1px] ' + (viewPastEvents ? 'border-black' : 'border-[#ffbe1c]')}
           >
             Upcoming
           </button>
@@ -96,7 +96,7 @@ const Events = () => {
             onClick={() => {
               setViewPastEvents(true);
             }}
-            className={'px-2 rounded' + (viewPastEvents ? ' bg-[#FFF3D4] text-black' : '')}
+            className={'px-2 rounded text-white border-[1px]' + (viewPastEvents ? 'border-[#ffbe1c]' : 'border-black')}
           >
             Past
           </button>
