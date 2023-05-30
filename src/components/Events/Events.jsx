@@ -109,7 +109,7 @@ const Events = () => {
             })}
 
           {!viewPastEvents && upcomingEvents.length === 0 ? (
-            <div className="w-full h-full flex flex-col justify-center items-center gap-10">
+            <div className="w-full min-h-[50vh] flex flex-col justify-center items-center gap-10">
               <h1 className="text-2xl">No Upcoming Events</h1>
               <button
                 onClick={() => {
