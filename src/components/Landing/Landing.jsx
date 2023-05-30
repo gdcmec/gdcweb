@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import '../designs.css';
 import './Landing.css';
-import landingimage from '../../assets/landingimage.jpg';
 import { motion } from 'framer-motion';
 // import { useState, useEffect, useRef } from "react";
 
@@ -57,8 +56,7 @@ const Landing = () => {
             right: 0,
             bottom: 0,
             zIndex: 1,
-            backgroundImage:
-              'url(https://img.freepik.com/free-photo/particle-burst-golden-sparkle-shimmer-background-illustration_1017-42064.jpg?w=1060&t=st=1681567191~exp=1681567791~hmac=bde82ac482d1b3148859f2f13fe3420137196b27b7247d98e11ada10fcde834a)',
+            backgroundColor: '#000',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
@@ -66,30 +64,32 @@ const Landing = () => {
           transition={{ duration: 0.5 }}
         ></motion.div>
       ) : (
-        <div className="bg-cover bg-no-repeat bg-center relative bg-fixed flex flex-col justify-center items-center  h-[100vh]  gap-12 md:gap-12 bg-[url('https://img.freepik.com/free-photo/particle-burst-golden-sparkle-shimmer-background-illustration_1017-42064.jpg?w=1060&t=st=1681567191~exp=1681567791~hmac=bde82ac482d1b3148859f2f13fe3420137196b27b7247d98e11ada10fcde834a')]">
+        <div className="relative bg-cover bg-no-repeat bg-center relative flex flex-col justify-center items-center  h-[100vh] gap-12 md:gap-6 bg-black">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-center text-white font-bold md:text-[4rem] text-[2rem] uppercase"
+            className="text-center text-gray-200 font-['Orbitron'] font-bold md:text-[4rem] text-[2rem] uppercase"
           >
-            Game Development Club<span className="text-[2rem] md:text-[4rem]  block"> MEC</span>
+            Game <span className="text-primary font-['Orbitron']">Development</span> Club
+            {/* GDC */}
+            <span className="text-[2rem] md:text-[4rem] font-['Orbitron'] block"> MEC</span>
           </motion.h1>
-          <motion.a
+          {/* <motion.a
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             href="#events"
-            className="outline  text-white
-	   outline-white h-[30px] w-auto align-center text-center px-2  text-xl "
+            className="outline  text-primary
+	   outline-secondary h-[30px] w-auto align-center text-center px-2  text-xl "
           >
             Start Game
-          </motion.a>
+          </motion.a> */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5,delay:0.4 }}
-            className="text-[#fff3d5] text-3xl  text-center"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-primary text-3xl  text-center"
           >
             Think it. Build it. Play it.
           </motion.p>
