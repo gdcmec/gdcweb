@@ -1,20 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@200;300;400;500;600;700;800;900&display=swap');
 
-/* @font-face {
-  font-family: 'Monument Extended Regular';
-  src: url('assets/fonts/MonumentExtended/MonumentExtended-Regular.otf');
-}
-
-@font-face {
-  font-family: 'Monument Extended Ultrabold';
-  src: url('assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.otf');
-} */
-
-*{
-  font-family: 'Orbitron' , sans-serif ;
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -29,23 +17,20 @@
   }
 }
 .gradient-default {
-  
-background: rgb(92,35,222);
-background: radial-gradient(circle, rgba(92,35,222,1) 59%, rgba(0,212,255,1) 74%, rgba(20,9,79,1) 100%);
+  background: rgb(92, 35, 222);
+  background: radial-gradient(circle, rgba(92, 35, 222, 1) 59%, rgba(0, 212, 255, 1) 74%, rgba(20, 9, 79, 1) 100%);
   /* background: linear-gradient(-45deg,#80D0C7, #80D0C7, #060606, #060606 ); */
   background-size: 400% 400%;
   animation: gradienta 15s ease alternate-reverse;
 }
 
 .gradient {
-/* background: rgb(92,35,222); */
-/* background:radial-gradient(48.33% 60.62% at 80.87% 48.33%,#5635ad 0%,#13094e 100%); */
-background: rgb(26, 26, 27);
-background:radial-gradient(48.33% 60.62% at 80.87% 48.33%,#353538 0%,#181819 100%);
+  /* background: rgb(92,35,222); */
+  /* background:radial-gradient(48.33% 60.62% at 80.87% 48.33%,#5635ad 0%,#13094e 100%); */
+  background: rgb(26, 26, 27);
+  background: radial-gradient(48.33% 60.62% at 80.87% 48.33%, #353538 0%, #181819 100%);
 
   /* background: linear-gradient(-45deg,#80D0C7, #80D0C7, #060606, #060606 ); */
-
-
 }
 
 @keyframes gradienta {
@@ -59,6 +44,7 @@ background:radial-gradient(48.33% 60.62% at 80.87% 48.33%,#353538 0%,#181819 100
     background-position: 100% 50%;
   }
 }
-.events-gradient{
+.events-gradient {
   background: rgb(26, 26, 27);
-background-image: radial-gradient(50% 100% at 50.33% 100%, #353538 0%,#181819 100%);}
+  background-image: radial-gradient(50% 100% at 50.33% 100%, #353538 0%, #181819 100%);
+}
