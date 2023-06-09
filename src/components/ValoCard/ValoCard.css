@@ -146,7 +146,7 @@ body {
   padding: 0px 16px;
 }
 :root {
-  --background-color: #0f1923;
+  --background-color: #0f192300;
 }
 
 
@@ -164,7 +164,7 @@ body {
   z-index: 3;
   /* Clean style */
   
-  --button-text-color: var(--background-color);
+  --button-text-color: #0f1923;
   --button-text-color-hover: var(--button-background-color);
   --border-color: #7D8082;
   --button-background-color: #ece8e1;
@@ -190,7 +190,7 @@ body {
   right: 0; left: 0;
   height: calc(50% - 5px);
   border: 1px solid var(--border-color);
-  transition: all .15s ease;
+  transition: all .001s ease;
 }
 
 .btn::before {
