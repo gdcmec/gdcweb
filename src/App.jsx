@@ -19,14 +19,15 @@ import { NintendoMob } from './components/NintendoMob/NintendoMob';
 import { Responsivehook1 } from './components/ResponsiveHook';
 import ValoCard from './components/ValoCard/ValoCard';
 import CardContainer from './components/CardContainer/CardContainer';
-
+import ComputersCanvas from './components/canvas/Computers';
+import Carousel from './components/Carousel/Carousel';
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // set the timeout to 3 seconds
+    }, 1000); // set the timeout to 3 seconds
   }, []);
   const pageVariants = {
     initial: {
@@ -81,14 +82,17 @@ function App() {
                 path="/"
                 element={
                   <div>
-                    <Landing />
+                    {/* <ComputersCanvas/> */}
+                    <Carousel
+                    
+                    />
                     {/* <CardContainer />*/}
 
                     {/* <TeamBanner/> */}
-                    <Events />
+                    {/* <Events />
                     <WhatWeTeach />
 
-                    <Footer />
+                    <Footer /> */}
                   </div>
                 }
               />

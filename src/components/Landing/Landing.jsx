@@ -45,6 +45,8 @@ const Landing = () => {
   return (
     <div id="home" className="scroll-mt-[90px]">
       <div className={!isChecked ? 'h-[100vh] ' : 'h-[100vh] fixed'}></div>
+      
+
       {!isChecked ? (
         <motion.div
           initial={{ y: '100vh' }}
