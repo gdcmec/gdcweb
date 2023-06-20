@@ -90,7 +90,7 @@ function App() {
                     <CardContainer />
 
                     {/* <TeamBanner/> */}
-                    <Events />
+                  
                     <WhatWeTeach />
 
                     <Footer />

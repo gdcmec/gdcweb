@@ -20,10 +20,10 @@
 }
 :root{
   --color-primary: #ffffff;
-  --color-secondary: #bab3b2;
-  --color-tertiary: #8e8887;
-  --color-quaternary: #706e6e;
-  --color-quinary: #898180;
+  --color-secondary: #e2cbe2;
+  --color-tertiary: #ea97ee;
+  --color-quaternary: #eba9f4a9;
+  --color-quinary: #f18afa00;
 }
 .gradient-default {
   background: rgb(92, 35, 222);

@@ -29,9 +29,9 @@ const WhatWeTeach = () => {
   }, []);
   return (
     !loading && (
-      <div className="h-max mt-12 bg-black">
+      <div className="h-max mt-12 ">
         <div>
-          <h1 className="text-primary font-[Orbitron] text-center text-4xl">What we teach</h1>
+          <h1 className="text-white text_shadows font-['bungee'] text-center text-2xl">What we teach</h1>
           <motion.hr initial={{ height: 0 }} className="mt-3" />
         </div>
         <div className="timeline text-white h-[1000px] mt-14 mb-16 flex flex-col gap-[180px] pt-16">

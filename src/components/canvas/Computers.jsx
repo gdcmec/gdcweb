@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF, useProgress } from '@react-three/drei';
 import CanvasLoader from '../loader';
 
 const Computers = ({ isMobile }) => {
-  const { scene } = useGLTF('./room/scene.gltf');
+  // const { scene } = useGLTF('./room/scene.gltf');
 
   return (
     <mesh>
@@ -63,7 +63,7 @@ const ComputersCanvas = () => {
 
   return (
     <div className="canvas-container" style={{ height: '100vh' }} onWheel={handleScroll}>
-      <Canvas
+      {/* <Canvas
         frameloop="demand"
         className="h-full"
         shadows
@@ -81,7 +81,7 @@ const ComputersCanvas = () => {
           />
           <Computers isMobile={isMobile} />
         </Suspense>
-      </Canvas>
+      </Canvas> */}
     </div>
   );
 };
