@@ -83,16 +83,17 @@ function App() {
                 element={
                   <div>
                     {/* <ComputersCanvas/> */}
+                    <Landing/>
                     <Carousel
                     
                     />
-                    {/* <CardContainer />*/}
+                    <CardContainer />
 
                     {/* <TeamBanner/> */}
-                    {/* <Events />
+                    <Events />
                     <WhatWeTeach />
 
-                    <Footer /> */}
+                    <Footer />
                   </div>
                 }
               />

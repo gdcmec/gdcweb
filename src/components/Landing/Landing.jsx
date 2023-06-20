@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import '../designs.css';
-import './Landing.css';
+// import '../designs.css';
+// import './Landing.css';
 import { motion } from 'framer-motion';
+import hero from '../../assets/hero.png';
 // import { useState, useEffect, useRef } from "react";
 
 // import Scrollbanner from "../Scrollbanner/Scrollbanner";
@@ -66,16 +67,17 @@ const Landing = () => {
           transition={{ duration: 0.5 }}
         ></motion.div>
       ) : (
-        <div className="relative bg-cover bg-no-repeat bg-center relative flex flex-col justify-center items-center  h-[100vh] gap-12 md:gap-6 bg-black">
+        <div className="  relative flex flex-col justify-center items-center  h-[100vh] gap-12 md:gap-6  bg-none  ">
+          <motion.img initial={{scale:1}} src={hero} className="fixed  z-[-10] w-[100%] md:w-[100%] " />
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-center text-gray-200 font-['Orbitron'] font-bold md:text-[4rem] text-[2rem] uppercase"
+            className="text-center text_shadows text-gray-200  font-bold md:text-[4rem] text-[2rem] uppercase"
           >
-            Game <span className="text-primary font-['Orbitron']">Development</span> Club
+            Game Development Club
             {/* GDC */}
-            <span className="text-[2rem] md:text-[4rem] font-['Orbitron'] block"> MEC</span>
+            <span className="text-[2rem] md:text-[4rem] font-['bungee'] block"> MEC</span>
           </motion.h1>
           {/* <motion.a
             initial={{ opacity: 0 }}
@@ -91,7 +93,7 @@ const Landing = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-primary text-3xl  text-center"
+            className="text-[#f6a446] text-3xl font-['bungee']  text-center"
           >
             Think it. Build it. Play it.
           </motion.p>
