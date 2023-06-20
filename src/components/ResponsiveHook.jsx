@@ -17,5 +17,5 @@ export const Responsivehook1 = () => {
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
   // return width < breakpoint ? <MobileLoader /> : <Nintendo />;
-  return width < breakpoint ? <LogoGifMob /> : <LogoGif />;
+  return width < breakpoint ? <LogoGifMob /> : <Nintendo />;
 };

@@ -29,7 +29,7 @@
 
 .timeline-content {
   position: absolute;
-  border: 1px solid #ffbe1c;
+  border: 1px solid #ffffff;
   display: block;
   top: 10%;
   transition: box-shadow 0.3s;
@@ -66,7 +66,7 @@
   right: 100%;
   border: medium solid #fff;
   border-width: 15px 15px 15px 15px;
-  border-color: transparent #fff3d5 transparent transparent;
+  border-color: transparent #ffffff transparent transparent;
 }
 
 .timeline section:nth-child(odd) div div::before {
@@ -78,7 +78,7 @@
   left: 100%;
   border: medium solid #fff;
   border-width: 15px 15px 15px 15px;
-  border-color: transparent transparent transparent #fff3d5;
+  border-color: transparent transparent transparent #ffffff;
 }
 
 /* .left{ */
