@@ -84,9 +84,7 @@ function App() {
                   <div>
                     {/* <ComputersCanvas/> */}
                     <Landing/>
-                    <Carousel
-                    
-                    />
+                 
                     <CardContainer />
 
                     {/* <TeamBanner/> */}
