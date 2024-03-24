@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-// import '../designs.css';
-// import './Landing.css';
+import './Landing.css';
 import { motion } from 'framer-motion';
-import hero from '../../assets/hero.png';
-// import { useState, useEffect, useRef } from "react";
+import hero from '../../assets/source1.jpg';
+import logo from '../../assets/newlogo.png';
 
-// import Scrollbanner from "../Scrollbanner/Scrollbanner";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import { events } from '@react-three/fiber';
+import { Events } from 'react-scroll';
+
+
+
 
 const Landing = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -14,37 +19,15 @@ const Landing = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsChecked(true);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
-  // const [isFixed, setIsFixed] = useState(false);
-  // const secondComponentRef = useRef(null);
 
-  // useEffect(() => {
-  //   const secondComponent = secondComponentRef.current;
-  //   const preOrg = secondComponent.getBoundingClientRect().top
-  //   const orgPos = window.pageYOffset + preOrg;
-  //
-  //   const handleScroll = () => {
-  //
-  //     console.log("org " + orgPos);
-  //
-  //     var top  = window.pageYOffset  + 82;
-  //
-  //     console.log("top " + top);
-  //
-  //     setIsFixed(top >= orgPos);
-  //
-  //   };
-  //
-  //   window.addEventListener('scroll', handleScroll);
-  //
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
 
   return (
-    <div id="home" className="scroll-mt-[90px]">
+    <div id="home" className="scroll-mt-[90px] w-[100vw]">
+      <img id = "logo" src={logo} alt="" />
       <div className={!isChecked ? 'h-[100vh] ' : 'h-[100vh] fixed'}></div>
       
 
@@ -67,39 +50,28 @@ const Landing = () => {
           transition={{ duration: 0.5 }}
         ></motion.div>
       ) : (
-        <div className="  relative flex flex-col justify-center items-center  h-[100vh] gap-12 md:gap-6  bg-none  ">
-          <motion.img initial={{scale:1}} src={hero} className="fixed  z-[-10] w-[100%] md:w-[100%] " />
+        <div className="  relative flex flex-col justify-center items-center w-[100%] h-[100vh] md:gap-6  bg-none">
+          <motion.img id = "bg" initial={{scale:1}} src={hero} className="fixed z-[-10] h-[100vh] md:w-[100vw] " />
+          
           <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-center text_shadows text-gray-200  font-bold md:text-[4rem] text-[2rem] uppercase"
+            initial={{ x: 0, y: 50, opacity: 0}}
+            animate={{ x: 0, y: 0 , opacity: 1}}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            
           >
-            Game Development Club
-            {/* GDC */}
-            <span className="text-[2rem] md:text-[4rem] font-['bungee'] block"> MEC</span>
+            <h1 id = "text" data-text = "Game Development Club" >Game Development <br></br> Club </h1>
+            
           </motion.h1>
-          {/* <motion.a
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            href="#events"
-            className="outline  text-primary
-	   outline-secondary h-[30px] w-auto align-center text-center px-2  text-xl "
-          >
-            Start Game
-          </motion.a> */}
+            {/* GDC */}
+          
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-[#f6a446] text-3xl font-['bungee']  text-center"
+            transition={{ duration: 0.5, delay: 1.4 }}
+            className="text-[#cfccc9] text-xl font-subtitle text-center md:text-3xl"
           >
-            Think it. Build it. Play it.
+            Think it • Build it • Play it
           </motion.p>
-          {
-            // <Scrollbanner ref={secondComponentRef} isFixed={isFixed}/>
-          }
         </div>
       )}
     </div>

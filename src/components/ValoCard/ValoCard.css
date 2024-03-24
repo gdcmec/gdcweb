@@ -54,7 +54,7 @@ body {
 
   position: absolute;
   top: var(--pos);
-  transform: translateY(calc(var(--pos) * -1));
+  transform: translateY(calc(var(--pos) * -0.5));
   padding: 15px 20px;
   z-index: 2;
   background: var(--secondary-color);
@@ -62,7 +62,7 @@ body {
 }
 
 .gaming-card:hover .card-content {
-  transform: translateY(calc(var(--pos) * -5));
+  transform: translateY(calc(var(--pos) * -6.6));
   transition: transform 0.3s ease-in-out;
   width: 100%;
 }

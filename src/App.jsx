@@ -3,16 +3,12 @@ import './App.css';
 
 import Landing from './components/Landing/Landing';
 import Navbar from './components/Navbar/Navbar';
-import About from './components/About/About';
-import Events from './components/Events/Events';
 
-import Footer from './components/Footer/Footer';
 
-import WhatWeTeach from './components/WhatWeTeach/WhatWeTeach';
-import Team from './components/Team/Team';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import TeamBanner from './components/TeamBanner/TeamBanner';
-import Game from './components/Game/Game';
+
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { Nintendo } from './components/Nintendo/Nintendo';
 import { NintendoMob } from './components/NintendoMob/NintendoMob';
@@ -20,7 +16,7 @@ import { Responsivehook1 } from './components/ResponsiveHook';
 import ValoCard from './components/ValoCard/ValoCard';
 import CardContainer from './components/CardContainer/CardContainer';
 
-import Carousel from './components/Carousel/Carousel';
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -72,64 +68,16 @@ function App() {
       {loading ? (
         <Responsivehook1 />
       ) : (
-        <Router>
+        <BrowserRouter>
           <Navbar />
           {/* <NintendoMob/> */}
 
           <AnimatePresence>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <div>
-                    {/* <ComputersCanvas/> */}
-                    <Landing/>
-                 
-                    <CardContainer />
-
-                    {/* <TeamBanner/> */}
-                  
-                    <WhatWeTeach />
-
-                    <Footer />
-                  </div>
-                }
-              />
-
-              <Route
-                path="/team"
-                element={
-                  <motion.div
-                    initial="initial"
-                    animate="in"
-                    exit="out"
-                    variants={pageVariants}
-                    transition={pageTransition}
-                    className="mt-[7rem]"
-                  >
-                    <Team />
-                  </motion.div>
-                }
-              />
-
-              <Route
-                path="/game"
-                element={
-                  <motion.div
-                    initial="initial"
-                    animate="in"
-                    exit="out"
-                    variants={pageVariants}
-                    transition={pageTransition}
-                    className="mt-[7rem]"
-                  >
-                    <Game />
-                  </motion.div>
-                }
-              />
-            </Routes>
+            <section id = "home">
+              <Landing/>
+            </section>
           </AnimatePresence>
-        </Router>
+        </BrowserRouter>
       )}
     </div>
   );

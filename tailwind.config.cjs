@@ -9,6 +9,12 @@ module.exports = {
         "landback": "#111611"
       }
     },
+    fontFamily: {
+      mfont: ["Black Ops One", "system-ui"],
+      navfont: ["Orbitron", "sans-serif"],
+      title: ["Press Start 2P", "system-ui"],
+      subtitle: ["Wallpoet", "sans-serif"]
+    }
   },
   plugins: [],
 };

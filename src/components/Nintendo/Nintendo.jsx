@@ -8,7 +8,7 @@ export const Nintendo = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsChecked(true);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -16,7 +16,7 @@ export const Nintendo = () => {
     <motion.div
       initial={{ y: 0 }}
       animate={{ y: '-100vh' }}
-      transition={{ delay: 7.5, duration: 1 }}
+      transition={{ delay: 6.5, duration: 1 }}
       className="scale-[0.5] md:scale-100"
     >
       <input type="checkbox" id="screen" name="screen" checked={isChecked} />
@@ -44,7 +44,7 @@ export const Nintendo = () => {
               Welcome to
               <br />
               <strong>GDC</strong>
-              <p>Loading</p>
+              <p>Loading...</p>
             </span>
           </div>
         </label>
